@@ -8,8 +8,6 @@ const Menu = ({ data, className }) => (
   <ul className={className}>
     {data &&
       data.map((item) => {
-        console.log(item);
-
         if (item.subMenu) {
           return <MenuDropdown menuData={item} key={item.text} />;
         } else if (item.megaContent) {
