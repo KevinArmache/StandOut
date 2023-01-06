@@ -44,13 +44,7 @@
       "text": "Contact",
       "url": "/pages/contact-us",
       "extraClass": "menu-item-has-children has-mega-menu",
-      "subClass": "sub-menu",
-      "subMenu": [
-        {
-          "text": "Newsletter",
-          "url": "/#subscribe"
-        }
-      ]
+      "subClass": "sub-menu"
     }
   ]
 }
