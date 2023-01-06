@@ -48,7 +48,7 @@
       "subMenu": [
         {
           "text": "Newsletter",
-          "url": "/pages/newsletter"
+          "url": "/#subscribe"
         }
       ]
     }
