@@ -20,11 +20,11 @@ const Menu = ({ data, className }) => (
                   href={`${item.url}/[pid]`}
                   as={`${item.url}/${item.endPoint}`}
                 >
-                  <a>{item.text}</a>
+                  <a className="link-menu">{item.text}</a>
                 </Link>
               ) : (
                 <Link href={item.url} as={item.alias}>
-                  <a>{item.text}</a>
+                  <a className="link-menu">{item.text}</a>
                 </Link>
               )}
             </li>

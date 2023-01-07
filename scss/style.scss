@@ -120,3 +120,65 @@
 @import "elements/helpers";
 
 @import "themes/effect";
+
+// START - MY SCSS STYLE 
+
+body {
+    background-color: black ;
+}
+// DEKSTOP MENU
+.link-menu {
+    color: #f4d637 !important;
+}
+
+.menu-item-has-children > a {
+    color: #f4d637 !important;
+}
+.icon-user {
+    color: #f4d637 !important;
+}
+.icon-heart {
+    color: #f4d637 !important;
+}
+
+.icon-cart {
+    color: #f4d637 !important;
+}
+.icon-menu {
+    color: #f4d637 !important;
+}
+.icon-magnifier {
+    color: #f4d637 !important;
+}
+.form-control{
+    background-color: black !important;
+    color: #f4d637 !important; 
+    border-bottom: 1px solid #f4d637 !important;
+}
+.form-control::placeholder{
+    color: #f4d637 !important; 
+}
+.menu__text {
+    color: #f4d637; 
+}
+.icon-chevron-down {
+    color: #f4d637; 
+    
+}
+.icon-cross {
+    color: #f4d637; 
+}
+.ps-navigation__bottom > figcaption {
+    color: #f4d637 !important;    
+}
+.ps-navigation__bottom > p {
+    color: #f4d637;    
+}
+.ps-drawer {
+    background-color: black;
+}
+.ps-drawer__close {
+    background-color: black !important;
+}
+// END - MY SCSS STYLE 
+
