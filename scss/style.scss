@@ -126,7 +126,12 @@
 body {
     background-color: black ;
 }
-// DEKSTOP MENU
+// DEKSTOP MENU & MOBILE MENU
+
+.header.header--sticky {
+    background-color: black !important;
+
+}
 .link-menu {
     color: #f4d637 !important;
 }
