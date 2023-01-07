@@ -126,7 +126,7 @@
 body {
     background-color: black ;
 }
-// DEKSTOP MENU & MOBILE MENU
+// START - DEKSTOP MENU & MOBILE MENU
 
 .header.header--sticky {
     background-color: black !important;
@@ -184,6 +184,22 @@ body {
 }
 .ps-drawer__close {
     background-color: black !important;
+}
+// END - DEKSTOP MENU & MOBILE MENU
+
+// START - TITLE
+.ps-section__header > figure > figcaption {
+    color: #f4d637 !important;    
+
+}
+// END - TITLE
+.ps-product__title {
+    color: white !important;    
+}
+
+.ps-product__price {
+    color: #f4d637 !important;    
+
 }
 // END - MY SCSS STYLE 
 
