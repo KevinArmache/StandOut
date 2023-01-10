@@ -20,11 +20,12 @@ class CountDown extends Component {
       const now = moment();
       const countdown = moment(then - now);
       const days = countdown.format("D");
+      const month = countdown.format("MM");
       const hours = countdown.format("HH");
       const minutes = countdown.format("mm");
       const seconds = countdown.format("ss");
 
-      this.setState({ days, hours, minutes, seconds });
+      this.setState({ days, month, hours, minutes, seconds });
     }, 1000);
   }
 
@@ -34,10 +35,14 @@ class CountDown extends Component {
     }
   }
   render() {
-    const { days, hours, minutes, seconds } = this.state;
+    const { days, month, hours, minutes, seconds } = this.state;
 
     return (
       <ul className="ps-countdown">
+        <li>
+          <span className="days">{month}</span>
+          <span className="text">month</span>
+        </li>
         <li>
           <span className="days">{days}</span>
           <span className="text">Days</span>

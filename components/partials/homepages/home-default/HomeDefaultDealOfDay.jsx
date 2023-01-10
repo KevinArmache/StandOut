@@ -23,6 +23,7 @@ const HomeDefaultDealOfDay = () => {
       {data &&
         data.map((item) => (
           <div
+            key={item.id}
             className="ps-deal-of-day bg--top-right"
             style={{
               backgroundImage: `url('${baseUrl}${item.items[0].image.url}')`,
@@ -31,21 +32,21 @@ const HomeDefaultDealOfDay = () => {
             {/* {console.log(`${baseUrl}${item.items[0].image.url}`)} */}
             {console.log(item)}
 
-            <div key={item.id} className="ps-section__content">
+            <div className="ps-section__content">
               <p>Deal of the day</p>
               <h3>{item.name}</h3>
               <h5>
-                <del>79.90$</del>
-                &nbsp;39.90$
+                <del>{`${item.PrixAvantPromotion}`}</del>
+                &nbsp;{`${item.PrixApresPromotion}`}
               </h5>
               <div className="ps-section__badge">
                 <span className="ps-badge ps-badge--sale">
-                  Save <strong>50</strong>%
+                  Save <strong>{`${item.ReductionEnPourcentage}`}</strong>
                 </span>
               </div>
               <div className="ps-section__countdown">
                 <CountDown
-                  timeTillDate="20 1 2023, 6:00 am"
+                  timeTillDate={`${item.DateDeFinDePromotion}`}
                   timeFormat="DD MM YYYY, h:mm a"
                 />
               </div>
