@@ -56,7 +56,7 @@ const HeaderMobile = () => {
             <input
               className="form-control"
               type="text"
-              placeholder="Search Searching..."
+              placeholder="Search..."
               onChange={(e) => handleSetKeyword(e)}
             />
             <button onClick={(e) => handleSubmit(e)}>
