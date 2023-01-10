@@ -124,9 +124,15 @@
 // START - MY SCSS STYLE 
 
 body {
+    width: 100% !important;
     background-color: black ;
 }
+
 // START - DEKSTOP MENU & MOBILE MENU
+
+.ps-shop--search {
+    background-color: black !important;
+}
 
 .header.header--sticky {
     background-color: black !important;
@@ -167,8 +173,10 @@ body {
     color: #f4d637; 
 }
 .icon-chevron-down {
-    color: #f4d637; 
-    
+    color: #f4d637;    
+}
+.icon-frame-expand {
+    color: #f4d637;    
 }
 .icon-cross {
     color: #f4d637; 
@@ -187,10 +195,16 @@ body {
 }
 // END - DEKSTOP MENU & MOBILE MENU
 
-// START - TITLE
+// START - TITLE - TEXT
 .ps-section__header > figure > figcaption {
     color: #f4d637 !important;    
 
+}
+.ps-shop__left > h1{
+color: white !important;
+}
+.ps-document p {
+font-size: 2rem !important;
 }
 .ps-post__title {
     color: white !important;    
@@ -206,9 +220,17 @@ body {
     color: #f4d637 !important;    
     
 }
-// END - TITLE
+// END - TITLE & TEXT
 .ps-product__title {
     color: white !important;    
+}
+.ps-product__actions {
+    background-color: black !important;
+
+}
+.ps-product__actions > a{
+    color: white !important;    
+
 }
 
 .ps-product__price {
@@ -241,5 +263,24 @@ body {
 .ps-list--line li a:hover  {  
     color: #f4d637 !important;     
 }
+.visible-mobile-search-bar{
+    display: block !important;
+}
+
+@media screen and (max-width: 600px) {
+ .tr-table {
+    // display: flex;
+    // flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+.table-thead {
+    display: none;
+}
+  }
+.item-price > strong{
+    color: white !important;
+}
+
 // END - MY SCSS STYLE 
 
