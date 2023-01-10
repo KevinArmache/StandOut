@@ -209,7 +209,7 @@
                 left: 0;
                 width: 100%;
                 height: 2px;
-                background-color: $color-heading;
+                background-color: #f4d637 !important; 
                 transform: scale3d(0, 1, 1);
                 transform-origin: 100% 50%;
                 transition: transform .6s $timing-1;
