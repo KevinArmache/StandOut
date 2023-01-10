@@ -12,6 +12,7 @@ import ModuleProductActions from "~/components/elements/products/modules/ModuleP
 const Product = ({ product }) => {
   // Views
   const priceView = SPGetProductPrice(product);
+
   const thumbnailImages = SPGetProductThumbailImages(product, "small");
 
   /*const badgeView = WPProductBadgeView(product);*/
