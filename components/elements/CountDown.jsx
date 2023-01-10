@@ -17,7 +17,6 @@ class CountDown extends Component {
     this.interval = setInterval(() => {
       const { timeTillDate, timeFormat } = this.props;
       const then = moment(timeTillDate, timeFormat);
-      console.log(then);
       const now = moment();
       const countdown = moment(then - now);
       const days = countdown.format("D");
