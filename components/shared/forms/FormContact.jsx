@@ -15,7 +15,7 @@ const FormContact = () => {
       email,
       message,
     };
-    console.log(data);
+
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -26,6 +26,8 @@ const FormContact = () => {
     }).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
+        alert("Mail Envoyé");
+
         console.log("Response succeeded!");
         setSubmitted(true);
         setName("");
@@ -84,7 +86,7 @@ const FormContact = () => {
       <div className="form-group submit">
         <input
           type="submit"
-          className="ps-btn ps-btn--black"
+          className="ps-btn ps-btn--black send"
           value="Send message"
           onClick={(e) => {
             handleSubmit(e);
