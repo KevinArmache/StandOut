@@ -26,7 +26,6 @@ const FormContact = () => {
     }).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
-        alert("Message sent.");
         console.log("Response succeeded!");
         setSubmitted(true);
         setName("");
