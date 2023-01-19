@@ -75,7 +75,9 @@ const ContactUsPage = () => {
                       <strong className="text-uppercase">Email</strong>
                     </p>
                     <p>
-                      <a href="mailto:Standout@gmail.com">standout@gmail.com</a>
+                      <a href="mailto:standoutqueries@gmail.com">
+                        standoutqueries@gmail.com
+                      </a>
                     </p>
                   </aside>
                 </figure>
