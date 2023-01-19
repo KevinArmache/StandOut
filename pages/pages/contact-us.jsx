@@ -30,7 +30,7 @@ const ContactUsPage = () => {
               </div>
               <div className="ps-section__right">
                 <ul className="ps-list--social">
-                  <li>
+                  {/* <li>
                     <a href="#">
                       <i className="fa fa-facebook"></i>
                     </a>
@@ -49,16 +49,16 @@ const ContactUsPage = () => {
                     <a href="#">
                       <i className="fa fa-linkedin"></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#">
+                    <a href="https://instagram.com/standoutgang">
                       <i className="fa fa-instagram"></i>
                     </a>
                   </li>
                 </ul>
                 <figure>
-                  <figcaption>Our Office</figcaption>
-                  <p>15 St Margarets Lane New York, NY 10033</p>
+                  <figcaption>Contacts</figcaption>
+                  {/* <p>15 St Margarets Lane New York, NY 10033</p> */}
                 </figure>
                 <figure>
                   <figcaption>Get in Touch</figcaption>
@@ -66,14 +66,16 @@ const ContactUsPage = () => {
                     <p>
                       <strong className="text-uppercase">Phone Number</strong>
                     </p>
-                    <p>631-679-6357</p>
+                    <a className="contact-number" href="tel:+2438195038927">
+                      +243 819 503 8927
+                    </a>
                   </aside>
                   <aside>
                     <p>
                       <strong className="text-uppercase">Email</strong>
                     </p>
                     <p>
-                      <a href="#">supro@example.com</a>
+                      <a href="mailto:Standout@gmail.com">standout@gmail.com</a>
                     </p>
                   </aside>
                 </figure>
