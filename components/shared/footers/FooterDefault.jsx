@@ -35,12 +35,12 @@ const FooterDefault = () => (
           <div className="col-xl-6 col-lg-4 col-md-6 col-sm-6 col-12 ">
             <p className="ps-footer__copyright">
               &copy;
-              {new Date().getFullYear()}
+              {new Date().getFullYear()}&nbsp;
               <strong>StandOut</strong>. All rights reserved
             </p>
             <p>
               Copyright &copy; All rights reserved <br />
-              This website is made with ❤️ by
+              This website is made with ❤️ by&nbsp;
               <a href="https://www.instagram.com/kevinarmache/" target="_blank">
                 Kevin Armache
               </a>
