@@ -1,0 +1,429 @@
+/*
+    Project: Supro Minimal List HTML Template
+    Version: 1.0
+    Date Created: 2020-08-16T8:00:50
+    Date Updated: 2020-10-12T23:15:24+07:00
+    Developed by: diaryforlife
+*/
+/*
+    TABLE OF CONTENT
+        1. RESET AND TYPHOGRAPHY
+            1.1 reset
+            1.2 typhography
+        2. ELEMENTS
+            2.1 grid
+            2.2 list
+            2.3 button
+            2.4 form
+            2.5 post
+            2.6 pagination
+            2.7 breadcrumb
+            2.8 block
+            2.9 widget
+            2.10 slider
+            2.11 masonry
+            2.12 product
+            2.13 banner
+            2.14 filter
+            2.15 table
+            2.16 loader
+            2.17 modal
+        3. COMPONENTS
+             3.1 Cart
+             3.2 forms
+             3.3 search
+             3.4 section
+             3.5 pages
+        4. MODULES
+            4.1 header
+            4.2 footer
+        5. HELPERS
+        6. CUSTOM
+*/
+
+@import "utils/mixin";
+@import "vendor/media_query";
+@import "vendor/bourbon/bourbon";
+
+@import "utils/variable";
+/*1. RESET AND TYPHOGRAPHY */
+//1.1 reset
+@import "vendor/normalize";
+//1.2 typhography
+@import "base/typhography";
+/*2. ELEMENTS */
+//2.1 grid
+@import "elements/grid";
+// 2.2 list
+@import "elements/list";
+// 2.3 button
+@import "elements/button";
+// 2.4 form
+@import "elements/form";
+//2.5 post
+@import "elements/post";
+// 2.6 pagination
+@import "elements/pagination";
+// 2.7 breadcrumb
+@import "elements/breadcrumb";
+// 2.8 block
+@import "elements/block";
+
+@import "elements/panel";
+// 2.9 widget
+@import "elements/widget";
+// 2.10 slider
+@import "elements/slider";
+// 2.11 masonry
+@import "vendor/masonry_grid";
+
+@import "elements/masonry";
+// 2.12 product
+@import "elements/product";
+// 2.13 banner
+@import "elements/banner";
+// 2.14 filter
+@import "elements/filter";
+// 2.15 table
+@import "elements/table";
+// 2.16 loader
+@import "elements/loader";
+// 2.17 modal
+@import "elements/modal";
+// 2.17 accordion
+@import "elements/accordion";
+// 2.18 modal
+@import "elements/tabs";
+
+@import "elements/skeletons";
+
+@import "elements/drawers";
+/*3. COMPONENTS */
+// 3.1 Cart
+@import "components/cart";
+// 3.2 forms
+@import "components/forms";
+// 3.3 search
+@import "components/search";
+// 3.4 section
+@import "components/section";
+@import "components/navigation";
+// 3.5 pages
+@import "components/pages";
+@import "components/menu";
+/*4. MODULES */
+// 4.1 header
+@import "modules/header";
+// 4.2 footer
+@import "modules/footer";
+/*5. HELPERS */
+@import "elements/helpers";
+
+@import "themes/effect";
+
+// START - MY SCSS STYLE 
+
+body {
+    width: 100% !important;
+    background-color: black ;
+}
+
+// START - DEKSTOP MENU & MOBILE MENU
+
+.ps-shop--search {
+    background-color: black !important;
+}
+
+
+.link-menu {
+    color: #f4d637 !important;
+}
+
+.menu-item-has-children > a {
+    color: #f4d637 !important;
+}
+.icon-user {
+    color: #f4d637 !important;
+}
+.icon-heart {
+    color: #f4d637 !important;
+}
+
+.icon-cart {
+    color: #f4d637 !important;
+}
+.icon-menu {
+    color: #f4d637 !important;
+}
+.icon-magnifier {
+    color: #f4d637 !important;
+}
+.form-control{
+    background-color: black !important;
+    color: #f4d637 !important; 
+    border-bottom: 1px solid #f4d637 !important;
+}
+.form-control::placeholder{
+    color: #f4d637 !important; 
+}
+.menu__text {
+    color: #f4d637; 
+}
+.icon-chevron-down {
+    color: #f4d637;    
+}
+.icon-frame-expand {
+    color: #f4d637;    
+}
+.icon-cross {
+    color: #f4d637; 
+}
+.ps-navigation__bottom > figcaption {
+    color: #f4d637 !important;    
+}
+.ps-navigation__bottom > p {
+    color: #f4d637;    
+}
+.ps-drawer {
+    background-color: black;
+}
+.ps-drawer__close {
+    background-color: black !important;
+}
+// END - DEKSTOP MENU & MOBILE MENU
+
+// START - TITLE - TEXT
+.ps-section__header > figure > figcaption {
+    color: #f4d637 !important;    
+
+}
+.ps-shop__left > h1{
+color: white !important;
+}
+.ps-document p {
+font-size: 2rem !important;
+}
+.ps-post__title {
+    color: white !important;    
+
+}
+#subscribe > div > figure > figcaption {
+    color: white !important;    
+}
+.widget-title {
+    color: #f4d637 !important;    
+}
+.ps-footer__copyright > strong {
+    color: #f4d637 !important;    
+    
+}
+// END - TITLE & TEXT
+.ps-product__title {
+    color: white !important;    
+}
+.ps-product__actions {
+    background-color: black !important;
+
+}
+.ps-product__actions > a{
+    color: white !important;    
+
+}
+
+.ps-product__price {
+    color: #f4d637 !important;    
+}
+.ps-page__header > h3{
+    color: white !important;    
+
+}
+
+.icon-envelope {
+    color: #f4d637 !important;    
+    
+}
+.ps-link--under {
+    color: #f4d637 !important;    
+
+}
+.ps-home-product .ps-section__footer a:before {
+    background-color: #f4d637 !important;
+}
+.ps-home-product .ps-section__header ul li.active a {
+    color: #f4d637 !important;    
+
+}
+.ps-list--line li a:before  {
+    background-color: #f4d637 !important;    
+    color: #f4d637 !important;     
+}
+.ps-list--line li a:hover  {  
+    color: #f4d637 !important;     
+}
+// .visible-mobile-search-bar{
+//     display: block !important;
+// }
+
+@media screen and (max-width: 600px) {
+ .tr-table {
+    // display: flex;
+    // flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+.table-thead {
+    display: none;
+}
+
+}
+.item-price > strong{
+    color: white !important;
+}
+.ps-shop__header > h1 {
+    color: white !important;
+
+}
+.ps-section__content > h3 {
+    color: white !important;
+
+}
+.ps-section__right > blockquote > p {
+    color: #f4d637 !important;     
+
+
+}
+.ps-section__right > figure > h4 {
+    color: white !important;
+}
+.ps-section__header  > h3{
+    color: white !important;
+
+}
+.ps-about-moments figure figcaption {
+    color: #f4d637 !important;     
+
+
+}
+.ps-about-video .ps-section__footer h4 {
+    color: #f4d637 !important;     
+
+}
+
+.color-so {
+    color: #f4d637 !important;     
+}
+
+
+@media screen and (max-width: 500px) {
+
+.ps-banner__content {
+margin-top: 80px;
+}
+   
+}
+
+.out-of-stock {
+    padding: 5px;
+   background-color: #f4d637 ;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.line-out-of-stock {
+    color: white !important;
+
+}
+
+// START - COLOR CSS 
+.color-white {
+    color: white !important;
+}
+.color-yellow {
+    color: #f4d637 !important;
+}
+.color-pink {
+    color: #DCBFB2 !important;
+}
+// END - COLOR CSS
+
+.ps-shop .ps-shop__right > p strong {
+    color: #f4d637 !important;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    // padding-top: 15px;
+    // padding-bottom: 15px;
+    background-color: black !important;
+     
+
+}
+.header.header--sticky {
+    background-color: black !important;
+}
+@media screen and (max-width: 1400px) {
+.header .header__search-mini {
+    display: none !important;
+}
+   
+}
+@media screen and (max-width: 1200px) {
+    .ps-banner--3 {
+            margin-top: 50px;
+        }
+           
+    }
+@media screen and (max-width: 481px) {
+.ps-banner--3 {
+        margin-top: 50px;
+    }
+       
+}
+.ps-list--under > li > a {
+    color: white !important;
+}
+.ps-list--under > li > a:hover {
+    color: #DCBFB2 !important;
+
+
+}
+.ps-list--under > li > a:focus {
+    color: #DCBFB2 !important;
+
+
+}
+.ps-shop .ps-shop__sorting > span {
+    color: #999999 !important;
+    
+} 
+.ps-shop .ps-shop__filter .ps-shop__filter-toggle {
+    color: #999999 !important;
+
+}
+.ps-block__items > a > strong {
+    color: white !important;
+
+}
+.ps-block__items > a > small {
+    color: white !important;
+
+}
+.ps-block__content > figure > figcaption > small {
+    color: #f4d637 !important;
+
+
+}
+.ps-block__total > figcaption {
+    color: white !important;
+
+}
+.ps-block__total > figcaption > span  {
+    color: #f4d637 !important;
+
+
+}
+// END - MY SCSS STYLE 
+
