@@ -1,10 +1,10 @@
 export default function (req, res) {
+  let nodemailer = require("nodemailer");
   require("dotenv").config();
 
-  let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.zoho.com",
+    host: "smtp.mailtrap.io",
+    port: 2525,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASS,
@@ -14,7 +14,7 @@ export default function (req, res) {
   const mailData = {
     from: `${req.body.email}`,
     // to: "standoutqueries@gmail.com",
-    to: "kevinarmache@gmail.com",
+    to: "kevinarmachepsn@gmail.com",
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,
     html: `<div>${req.body.message}</div><p>Sent from:
