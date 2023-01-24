@@ -6,8 +6,8 @@ export default function (req, res) {
     host: "smtp.mailtrap.io",
     port: 2525,
     auth: {
-      user: "7b9a8afe49dd41",
-      pass: "989dae859d93e9",
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
     },
   });
   const mailData = {
