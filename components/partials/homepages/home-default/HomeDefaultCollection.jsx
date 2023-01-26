@@ -10,14 +10,16 @@ const HomeDefaultCollection = () => {
             className="ps-block__thumbnail bg--top-right"
             style={{
               backgroundImage:
-                "url('/static/img/homepage/home-right-to-left/collection/3.jpg')",
+                "url('/static/img/homepage/home-right-to-left/collection/1.jpg')",
             }}
           ></div>
           <div className="ps-block__content">
-            <p className="color-yellow">Jaccquard Print</p>
-            <h4 className="color-white">Hairband Collection</h4>
+            <span className="color-yellow-black">Top Tendencies </span>
+            <h4 className="color-white">New Arrival</h4>
             <Link href="/shop">
-              <a className="ps-link--under">Discover more</a>
+              <a href="#new-arrival" className="ps-link--under">
+                Discover more
+              </a>
             </Link>
           </div>
         </div>
@@ -32,10 +34,12 @@ const HomeDefaultCollection = () => {
             }}
           ></div>
           <div className="ps-block__content">
-            <p>Jaccquard Print</p>
-            <h4 className="color-yellow">Hairband Collection</h4>
+            <span className="color-white-black">Top Picks</span>
+            <h4 className="color-yellow">Best Sellers</h4>
             <Link href="/shop">
-              <a className="ps-link--under">Discover more</a>
+              <a href="#topsellers" className="ps-link--under">
+                Discover more
+              </a>
             </Link>
           </div>
         </div>
@@ -46,12 +50,12 @@ const HomeDefaultCollection = () => {
             className="ps-block__thumbnail bg--top-left"
             style={{
               backgroundImage:
-                "url('/static/img/homepage/home-right-to-left/collection/1.jpg')",
+                "url('/static/img/homepage/home-right-to-left/collection/3.jpg')",
             }}
           />
           <div className="ps-block__content">
-            <p className="color-yellow">Special Price</p>
-            <h4 className="color-white">Corduroy Culottes</h4>
+            <span className="color-yellow-black">Stay On Trends</span>
+            <h4 className="color-white">Trendy</h4>
             <Link href="/shop">
               <a className="ps-link--under">Discover more</a>
             </Link>

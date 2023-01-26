@@ -337,9 +337,24 @@ margin-top: 80px;
 // START - COLOR CSS 
 .color-white {
     color: white !important;
+  
+    
+}
+.color-white-black {
+    color: white !important;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    
 }
 .color-yellow {
     color: #f4d637 !important;
+}
+.color-yellow-black {
+    color: #f4d637 !important;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
 }
 .color-pink {
     color: #DCBFB2 !important;

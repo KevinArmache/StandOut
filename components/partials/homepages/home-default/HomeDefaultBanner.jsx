@@ -27,7 +27,7 @@ const HomeDefaultBanner = () => {
             }}
           >
             <div className="ps-banner__content">
-              <p>Melanin Hat</p>
+              {/* <p>Melanin Hat</p> */}
 
               <h3 className="color-yellow">Welcome</h3>
               <a className="ps-link--under" href="#">

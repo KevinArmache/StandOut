@@ -6,7 +6,7 @@ class CollectionRepository {
   }
 
   async getProductsByCollectionSlug(slug) {
-    console.log(slug);
+    console.log("slug ", slug);
     const reponse = await Repository.get(
       `${baseUrlProduct}/collections?slug_in=${slug}`
     )
