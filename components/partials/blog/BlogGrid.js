@@ -2,66 +2,79 @@ import React, { useEffect, useState } from "react";
 import PostRepository from "~/repositories/PostRepository";
 import ArticleGrid from "~/components/elements/articles/ArticleGrid";
 import SuproPagination from "~/components/elements/basic/SuproPagination";
+import TweetEmbed from "react-tweet-embed";
+import { baseUrlProduct } from "~/repositories/Repository";
 
 const BlogGrid = ({ collectionSlug, column }) => {
-  const [loading, setLoading] = useState(true);
-  const [posts, setPosts] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [posts, setPosts] = useState(null);
+  // const [blogs, setBlogs] = useState();
 
-  async function getPosts() {
-    let queries, APIPosts;
-    if (collectionSlug !== undefined) {
-      queries = {
-        slug_eq: collectionSlug,
-      };
-      APIPosts = await PostRepository.SPGetPostItemOfCollectionBySlug(queries);
-    } else {
-      queries = {
-        // _limit: 6,
-      };
-      APIPosts = await PostRepository.getPosts(queries);
-    }
-    console.log(APIPosts);
+  // const response = fetch(`${baseUrlProduct}/blogs`).then((response) =>
+  //   response.json()
+  // );
 
-    if (APIPosts) {
-      setTimeout(function () {
-        setLoading(false);
-      }, 200);
-      setPosts(APIPosts);
-      return APIPosts;
-    } else {
-      setPosts(null);
-      return null;
-    }
-  }
+  // // update the state
+  // setBlogs(response);
+  // console.log(blogs);
 
-  useEffect(() => {
-    getPosts();
-  }, []);
-  let viewPostItems;
-  if (!loading && posts) {
-    console.log(posts);
-    viewPostItems = posts.map((item) => {
-      if (column === "3") {
-        return (
-          <div className=" col-md-4 col-sm-6" key={item.id}>
-            <ArticleGrid post={item} />
-          </div>
-        );
-      } else if (column === "4") {
-        return (
-          <div className="col-lg-3 col-md-4 col-sm-6" key={item.id}>
-            <ArticleGrid post={item} />
-          </div>
-        );
-      } else {
-        return (
-          <div className="col-md-6" key={item.id}>
-            <ArticleGrid post={item} />
-          </div>
-        );
-      }
-    });
-  }
+  // async function getPosts() {
+  //   let queries, APIPosts;
+  //   if (collectionSlug !== undefined) {
+  //     queries = {
+  //       slug_eq: collectionSlug,
+  //     };
+  //     APIPosts = await PostRepository.SPGetPostItemOfCollectionBySlug(queries);
+  //   } else {
+  //     queries = {
+  //       _limit: 6,
+  //     };
+  //     APIPosts = await PostRepository.getPosts(queries);
+  //   }
+
+  //   if (APIPosts) {
+  //     setTimeout(function () {
+  //       setLoading(false);
+  //     }, 200);
+  //     setPosts(APIPosts);
+  //     return APIPosts;
+  //   } else {
+  //     setPosts(null);
+  //     return null;
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getPosts();
+  // }, []);
+  // let viewPostItems;
+  // if (!loading) {
+  //   viewPostItems = blogs.map((item) => {
+  //     if (column === "3") {
+  //       return (
+  //         <div className=" col-md-4 col-sm-6" key={item.id}>
+  //           {/* <ArticleGrid post={item} /> */}
+  //           <blogModify />
+
+  //         </div>
+  //       );
+  //     } else if (column === "4") {
+  //       return (
+  //         <div className="col-lg-3 col-md-4 col-sm-6" key={item.id}>
+  //           {/* <ArticleGrid post={item} /> */}
+  //           <blogModify />
+  //         </div>
+  //       );
+  //     } else {
+  //       return (
+  //         <div className="col-md-6" key={item.id}>
+  //           {/* <ArticleGrid post={item} /> */}
+  //           <blogModify />
+  //         </div>
+  //       );
+  //     }
+  //   });
+  // }
 
   return (
     <div className="ps-blog ps-blog--grid">
@@ -90,7 +103,65 @@ const BlogGrid = ({ collectionSlug, column }) => {
         </div>
         <div className="ps-blog__content">
           <div className="ps-post-items">
-            <div className="row">{viewPostItems}</div>
+            <div className="rowModify">
+              {/* {viewPostItems} */}
+              <TweetEmbed
+                tweetId="783943172057694208"
+                options={{ cards: "hidden" }}
+              />
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="1069519883610804224"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="1069519883610804224"
+                options={{ theme: "dark" }}
+              />{" "}
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="1069519883610804224"
+                options={{ theme: "dark" }}
+              />{" "}
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="1069519883610804224"
+                options={{ theme: "dark" }}
+              />{" "}
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="1069519883610804224"
+                options={{ theme: "dark" }}
+              />{" "}
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+              <TweetEmbed
+                tweetId="1069519883610804224"
+                options={{ theme: "dark" }}
+              />{" "}
+              <TweetEmbed
+                tweetId="771763270273294336"
+                options={{ theme: "dark" }}
+              />
+            </div>
           </div>
         </div>
         <div className="ps-blog__footer">{/* <SuproPagination /> */}</div>

@@ -454,5 +454,17 @@ margin-top: 80px;
     color: white !important;
 
 }
+.rowModify {
+    display: flex;
+    justify-content: space-evenly !important;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.rowModify  > div {
+   width: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 // END - MY SCSS STYLE 
 
