@@ -4,6 +4,7 @@ import ArticleGrid from "~/components/elements/articles/ArticleGrid";
 import SuproPagination from "~/components/elements/basic/SuproPagination";
 import TweetEmbed from "react-tweet-embed";
 import { baseUrlProduct } from "~/repositories/Repository";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const BlogGrid = ({ collectionSlug, column }) => {
   // const [loading, setLoading] = useState(true);
@@ -106,61 +107,42 @@ const BlogGrid = ({ collectionSlug, column }) => {
             <div className="rowModify">
               {/* {viewPostItems} */}
               <TweetEmbed
-                tweetId="783943172057694208"
+                tweetId="1584480219725201408"
                 options={{ cards: "hidden" }}
               />
               <TweetEmbed
-                tweetId="771763270273294336"
+                tweetId="1586889325320572928"
                 options={{ theme: "dark" }}
               />
               <TweetEmbed
-                tweetId="1069519883610804224"
+                tweetId="1389272778382188544"
                 options={{ theme: "dark" }}
               />
               <TweetEmbed
-                tweetId="771763270273294336"
+                tweetId="1389272815312965642"
                 options={{ theme: "dark" }}
               />
               <TweetEmbed
-                tweetId="1069519883610804224"
-                options={{ theme: "dark" }}
-              />{" "}
-              <TweetEmbed
-                tweetId="771763270273294336"
+                tweetId="1389160892030402560"
                 options={{ theme: "dark" }}
               />
               <TweetEmbed
-                tweetId="1069519883610804224"
-                options={{ theme: "dark" }}
-              />{" "}
-              <TweetEmbed
-                tweetId="771763270273294336"
+                tweetId="1130416134640099328"
                 options={{ theme: "dark" }}
               />
-              <TweetEmbed
-                tweetId="1069519883610804224"
-                options={{ theme: "dark" }}
-              />{" "}
-              <TweetEmbed
-                tweetId="771763270273294336"
-                options={{ theme: "dark" }}
-              />
-              <TweetEmbed
-                tweetId="1069519883610804224"
-                options={{ theme: "dark" }}
-              />{" "}
-              <TweetEmbed
-                tweetId="771763270273294336"
-                options={{ theme: "dark" }}
-              />
-              <TweetEmbed
-                tweetId="1069519883610804224"
-                options={{ theme: "dark" }}
-              />{" "}
-              <TweetEmbed
-                tweetId="771763270273294336"
-                options={{ theme: "dark" }}
-              />
+              {/* INSTAGRAM IFRAME */}
+              <div>
+                <InstagramEmbed url="https://www.instagram.com/p/BuGx1xKBL_y/" />
+              </div>
+              <div>
+                <InstagramEmbed url="https://www.instagram.com/p/CkqWCbesUCm/" />
+              </div>{" "}
+              <div>
+                <InstagramEmbed url="https://www.instagram.com/p/COa32aIn0md/" />
+              </div>{" "}
+              <div>
+                <InstagramEmbed url="https://www.instagram.com/p/COVKzmHn6_Q/" />
+              </div>
             </div>
           </div>
         </div>

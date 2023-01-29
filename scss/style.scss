@@ -461,10 +461,24 @@ margin-top: 80px;
     align-items: center;
 }
 .rowModify  > div {
-   width: 80%;
+   width: 95% !important;
 display: flex;
 justify-content: center;
 align-items: center;
 }
+.rowModify  > div > div  {
+    display: flex  !important;
+    max-width: 550px !important ;
+    width: 100% !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    border-radius: 12px !important;
+ }
+ .rowModify  > div > div > iframe {
+    border-radius: 12px !important;
+ }
+//  .instagram-media .instagram-media-rendered {
+//     border-radius: 12px !important;
+//  }
 // END - MY SCSS STYLE 
 
