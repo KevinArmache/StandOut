@@ -160,14 +160,15 @@ export function SPGetProductThumbailImages(product, size) {
 
 export function SPGetProductPrice(product) {
   let view;
+
   if (product.sale_price) {
     view = (
       <p className="ps-product__price sale">
-        {formatCurrency(product.price + 20)}
+        {formatCurrency(product.price)}
         <span>$</span>
 
         <del className="ml-1">
-          {formatCurrency(product.sale_price + 20)}
+          {formatCurrency(product.sale_price)}
           <span>$</span>
         </del>
       </p>
@@ -175,7 +176,7 @@ export function SPGetProductPrice(product) {
   } else {
     view = (
       <p className="ps-product__price">
-        {formatCurrency(product.price + 20)}
+        {formatCurrency(product.price)}
         <span>$</span>
       </p>
     );
