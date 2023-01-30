@@ -30,11 +30,11 @@ const ModuleDetailInformation = ({ product }) => {
       {console.log(product)}
       <div className="ps-product__info-header">
         <div className="ps-product__rating">
-          <Rating />
-          <span>1 Review</span>
+          {/* <Rating />
+          <span>1 Review</span> */}
         </div>
         <h2 className="ps-product__title">{product.title}</h2>
-        <span className="ps-product__sku">SKU: AB1609456789</span>
+        {/* <span className="ps-product__sku">SKU: AB1609456789</span> */}
       </div>
 
       {outofstock(product)}
@@ -43,7 +43,7 @@ const ModuleDetailInformation = ({ product }) => {
         <p>{product.short_description}</p>
       </div>
       <SubModuleDetailShopping product={product} />
-      <SubModuleDetailSpecification />
+      {/* <SubModuleDetailSpecification /> */}
     </div>
   );
 };
