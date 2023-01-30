@@ -44,8 +44,8 @@ const HomeDefaultBanner = () => {
             }}
           >
             <div className="ps-banner__content">
-              <p>Standout Swear</p>
-              <h3>Sneakers</h3>
+              {/* <p>Standout Swear</p> */}
+              <h3>Ace of spades</h3>
               <a className="ps-link--under" href="#">
                 Discover more
               </a>
@@ -60,9 +60,9 @@ const HomeDefaultBanner = () => {
             }}
           >
             <div className="ps-banner__content">
-              <p>T-shirt Standout </p>
+              {/* <p>T-shirt Standout </p> */}
               <h3 className="color-yellow">
-                Winter <br /> Collection
+                Melanin <br /> hat
               </h3>
               <a className="ps-link--under" href="#">
                 Discover more
