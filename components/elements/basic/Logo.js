@@ -14,7 +14,7 @@ const Logo = ({ url = "/", light }) => {
     return (
       <Link href={url}>
         <a className="ps-logo">
-          <img src="/static/img/logostandoutZZ.jpg" alt="" />
+          <img src="/static/img/logostandout.jpg" alt="" />
           {/* <img src="/static/img/Attachment-1.jpeg" alt="" /> */}
         </a>
       </Link>
