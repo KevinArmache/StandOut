@@ -2,7 +2,7 @@ import axios from "axios";
 const baseDomain = "https://standout-strapi.onrender.com";
 // const baseDomain = "http://localhost:13370";
 
-// export const wp = "https://wp.nouhtml5.com";
+export const wp = "https://wp.nouhtml5.com";
 // export const baseUrlProduct = "http://localhost:13370";
 export const baseUrlProduct = "https://standout-strapi.onrender.com";
 
