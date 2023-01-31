@@ -283,10 +283,7 @@ font-size: 2rem !important;
     color: white !important;
 
 }
-.ps-section__content > h3 {
-    color: white !important;
 
-}
 .ps-section__right > blockquote > p {
     color: #f4d637 !important;     
 
@@ -486,3 +483,10 @@ align-items: center;
 //  }
 // END - MY SCSS STYLE 
 
+.ps-deal-of-day .ps-section__countdown {
+    background-color:rgba(255,255,255, .2);
+}
+.ps-section__countdown > ul > li > span:nth-child(2) {
+    color: #f4d637 !important;
+    font-weight: bold;
+} 
