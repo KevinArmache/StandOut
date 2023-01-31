@@ -9,7 +9,7 @@ const EcomerceShoppingCart = () => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = async (event) => {
     // 👇 Get input value from "event"
     setValue(event.target.value);
   };
@@ -19,7 +19,6 @@ const EcomerceShoppingCart = () => {
     const response = await fetch(`${baseUrl}/discounts`);
     const json = await response.json();
     setData(json);
-    console.log(data);
   };
 
   return (
