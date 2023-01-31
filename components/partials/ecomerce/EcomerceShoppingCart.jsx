@@ -6,7 +6,7 @@ import ModuleEcomerceSummary from "~/components/partials/ecomerce/modules/Module
 import { baseUrl } from "~/repositories/Repository";
 
 const EcomerceShoppingCart = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {
@@ -16,10 +16,10 @@ const EcomerceShoppingCart = () => {
 
   const handleClick = async (value) => {
     console.log(value);
-    // const response = await fetch(`${baseUrl}/discounts`);
-    // const json = await response.json();
-    // setData(json);
-    // console.log(data);
+    const response = await fetch(`${baseUrl}/discounts`);
+    const json = await response.json();
+    setData(json);
+    console.log(data);
   };
 
   return (
