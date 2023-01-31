@@ -1,9 +1,27 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import ModuleEcomerceTableCartItems from "~/components/partials/ecomerce/modules/ModuleEcomerceTableCartItems";
 import Link from "next/link";
 import ModuleEcomerceSummary from "~/components/partials/ecomerce/modules/ModuleEcomerceSummary";
+import { baseUrl } from "~/repositories/Repository";
 
 const EcomerceShoppingCart = () => {
+  const [data, setData] = useState();
+  const [value, setValue] = useState("");
+
+  const handleChange = (event) => {
+    // 👇 Get input value from "event"
+    setValue(event.target.value);
+  };
+
+  const handleClick = async (value) => {
+    console.log(value);
+    // const response = await fetch(`${baseUrl}/discounts`);
+    // const json = await response.json();
+    // setData(json);
+    // console.log(data);
+  };
+
   return (
     <div className="ps-shopping-cart">
       <ModuleEcomerceTableCartItems />
@@ -22,8 +40,9 @@ const EcomerceShoppingCart = () => {
                 className="form-control"
                 type="text"
                 placeholder="Enter your code"
+                onChange={handleChange}
               />
-              <a href="#">Apply</a>
+              <a onClick={() => handleClick(value)}>Apply</a>
             </div>
           </div>
         </div>
