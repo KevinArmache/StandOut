@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { getCartItemsHelper } from "~/utilities/ecomerce-helpers";
 import Link from "next/link";
 import { connect } from "react-redux";
-import { set } from "lodash";
 
-const ModuleEcomerceSummary = ({ cart }) => {
+const ModuleEcomerceSummary = ({ cart, code }) => {
+  const [amount, setAmount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
   async function getProductByCardItems(cart) {
@@ -69,6 +69,26 @@ const ModuleEcomerceSummary = ({ cart }) => {
             )}
           </span>
         </h4>
+        <h4 className="color-white">
+          With coupon code
+          {/* {parseFloat(
+                  item.PrixAvantPromotion -
+                    item.PrixAvantPromotion *
+                      (item.ReductionEnPourcentage / 100)
+                ).toFixed(2)}
+                $ */}
+          <span className="color-yellow">
+            {total(cartItems) === NaN ||
+            total(cartItems) === null ||
+            total(cartItems) === undefined ? (
+              <span>0 $</span>
+            ) : (
+              <span>
+                {total(cartItems) - total(cartItems) * (code / 100)} $
+              </span>
+            )}
+          </span>
+        </h4>
         <div className="ps-block__shipping">
           <h5>Shipping</h5>
           <div className="ps-radio">
@@ -123,7 +143,7 @@ const ModuleEcomerceSummary = ({ cart }) => {
         </div>
       </div>
       <div className="ps-block__bottom">
-        <Link href="/shop/checkout">
+        <Link href="/shop/checkout" total>
           <a className="ps-btn ps-btn--black">Proceed to checkout</a>
         </Link>
       </div>

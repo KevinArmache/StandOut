@@ -1,15 +1,15 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ModuleEcomerceTableCartItems from "~/components/partials/ecomerce/modules/ModuleEcomerceTableCartItems";
 import Link from "next/link";
 import ModuleEcomerceSummary from "~/components/partials/ecomerce/modules/ModuleEcomerceSummary";
 import { baseUrl } from "~/repositories/Repository";
-import { set } from "lodash";
 
 const EcomerceShoppingCart = () => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const [response, setResponse] = useState("");
+  const [code, setCode] = useState(0);
 
   const handleChange = async (event) => {
     // 👇 Get input value from "event"
@@ -21,11 +21,13 @@ const EcomerceShoppingCart = () => {
 
   const handleClick = async (value) => {
     for (let i = 0; i < data.length; i++) {
+      console.log(data);
       if (value === data[i].code) {
-        setResponse(`Votre code promo est valide 🎉`);
-        break;
+        setCode(data[i].pourcentage);
+        setResponse(`Your promo code is valid 🎉`);
+        return code;
       } else {
-        setResponse(`Votre code promo n'est pas valide 😢`);
+        setResponse(`Your promo code is not valid 😢`);
       }
     }
   };
@@ -54,7 +56,7 @@ const EcomerceShoppingCart = () => {
             <span className="color-yellow">{response}</span>
           </div>
         </div>
-        <ModuleEcomerceSummary />
+        <ModuleEcomerceSummary code={code} />
       </div>
     </div>
   );
