@@ -4,8 +4,10 @@ import Link from "next/link";
 import { connect } from "react-redux";
 
 const ModuleEcomerceSummary = ({ cart, code }) => {
+  console.log(code);
   const [amount, setAmount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
+  const [total, setTotal] = useState(0);
 
   async function getProductByCardItems(cart) {
     const shoppingCart = await getCartItemsHelper(cart);
@@ -18,8 +20,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
     getProductByCardItems(cart);
   }, [cart]);
 
-  function total(dataArray) {
-    const [total, setTotal] = useState(0);
+  function cacultTotal(dataArray) {
     useEffect(() => {
       let empty = [];
       let sum;
@@ -35,8 +36,9 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
       sum = Math.round(sum * 100) / 100;
       setTotal(sum);
     }, [dataArray]);
-    return total;
   }
+  cacultTotal(cartItems);
+  console.log(total);
 
   // console.log();
 
@@ -60,12 +62,10 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
         <h4 className="color-white">
           Subtotal
           <span className="color-yellow">
-            {total(cartItems) === NaN ||
-            total(cartItems) === null ||
-            total(cartItems) === undefined ? (
+            {total === NaN || total === null || total === undefined ? (
               <span>0 $</span>
             ) : (
-              <span>{total(cartItems)} $</span>
+              <span>{total} $</span>
             )}
           </span>
         </h4>
@@ -78,14 +78,13 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
                 ).toFixed(2)}
                 $ */}
           <span className="color-yellow">
-            {total(cartItems) === NaN ||
-            total(cartItems) === null ||
-            total(cartItems) === undefined ? (
+            {cacultTotal(cartItems) === NaN ||
+            cacultTotal(cartItems) === null ||
+            cacultTotal(cartItems) === undefined ? (
               <span>0 $</span>
             ) : (
-              <span>
-                {total(cartItems) - total(cartItems) * (code / 100)} $
-              </span>
+              // METTRE UNE FONCTION OU LE RESULTAT D'UN HOOKS ICI
+              <span>{total - total * (code / 100)}$</span>
             )}
           </span>
         </h4>
