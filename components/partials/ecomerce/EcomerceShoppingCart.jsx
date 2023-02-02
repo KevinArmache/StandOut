@@ -10,6 +10,7 @@ const EcomerceShoppingCart = () => {
   const [value, setValue] = useState("");
   const [response, setResponse] = useState("");
   const [code, setCode] = useState(0);
+  const [pourcentage, setPourcentage] = useState(0);
 
   const handleChange = async (event) => {
     // 👇 Get input value from "event"
@@ -24,7 +25,9 @@ const EcomerceShoppingCart = () => {
       console.log(data);
       if (value === data[i].code) {
         setCode(data[i].pourcentage);
-        setResponse(`Your promo code is valid 🎉`);
+        setResponse(
+          `Your promo code is valid 🎉 you have ${data[i].pourcentage}% discount`
+        );
         return code;
       } else {
         setResponse(`Your promo code is not valid 😢`);
@@ -56,7 +59,7 @@ const EcomerceShoppingCart = () => {
             <span className="color-yellow">{response}</span>
           </div>
         </div>
-        <ModuleEcomerceSummary code={code} />
+        <ModuleEcomerceSummary code={code} pourcentage={pourcentage} />
       </div>
     </div>
   );

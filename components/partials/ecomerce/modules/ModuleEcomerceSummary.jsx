@@ -41,11 +41,10 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
   cacultTotal(cartItems);
 
   function valuepromo(total, code) {
-    console.log("total : ", total);
     if (code > 0) {
-      console.log("total : ", total);
       let value = total - total * (code / 100);
-      return value;
+
+      return parseFloat(value).toFixed(2);
     }
   }
 
@@ -79,19 +78,18 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
           </span>
         </h4>
         <h4 className="color-white">
-          With coupon code
-          {/* {parseFloat(
-                  item.PrixAvantPromotion -
-                    item.PrixAvantPromotion *
-                      (item.ReductionEnPourcentage / 100)
-                ).toFixed(2)}
-                $ */}
+          With coupon code <span className="color-yellow">{`${code} %`}</span>
           <span className="color-yellow">
-            {total === NaN || total === null || total === undefined ? (
+            {total === NaN ||
+            total === null ||
+            total === undefined ||
+            valuepromo(total, code) === undefined ? (
               <span>0 $</span>
             ) : (
               // METTRE UNE FONCTION OU LE RESULTAT D'UN HOOKS ICI
-              <span>{`${valuepromo(total, code)}`}$</span>
+              <span>
+                {`${valuepromo(total, code)}`}${/* {`${total}`}$ */}
+              </span>
             )}
           </span>
         </h4>
