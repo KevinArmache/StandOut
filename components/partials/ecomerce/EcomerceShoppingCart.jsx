@@ -4,23 +4,31 @@ import ModuleEcomerceTableCartItems from "~/components/partials/ecomerce/modules
 import Link from "next/link";
 import ModuleEcomerceSummary from "~/components/partials/ecomerce/modules/ModuleEcomerceSummary";
 import { baseUrl } from "~/repositories/Repository";
+import { set } from "lodash";
 
 const EcomerceShoppingCart = () => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
+  const [response, setResponse] = useState("");
 
   const handleChange = async (event) => {
     // 👇 Get input value from "event"
     setValue(event.target.value);
-  };
-
-  const handleClick = async (value) => {
-    console.log(value);
     const response = await fetch(`${baseUrl}/discounts`);
     const json = await response.json();
     setData(json);
   };
 
+  const handleClick = async (value) => {
+    for (let i = 0; i < data.length; i++) {
+      if (value === data[i].code) {
+        setResponse(`Votre code promo est valide 🎉`);
+        break;
+      } else {
+        setResponse(`Votre code promo n'est pas valide 😢`);
+      }
+    }
+  };
   return (
     <div className="ps-shopping-cart">
       <ModuleEcomerceTableCartItems />
@@ -43,6 +51,7 @@ const EcomerceShoppingCart = () => {
               />
               <a onClick={() => handleClick(value)}>Apply</a>
             </div>
+            <span className="color-yellow">{response}</span>
           </div>
         </div>
         <ModuleEcomerceSummary />

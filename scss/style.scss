@@ -416,7 +416,6 @@ margin-top: 80px;
 }
 .ps-block__items > a > strong {
     color: white !important;
-
 }
 .ps-block__items > a > small {
     color: white !important;
@@ -462,6 +461,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
 .rowModify  > div > div  {
     display: flex  !important;
     max-width: 550px !important ;
@@ -473,6 +473,22 @@ align-items: center;
  .rowModify  > div > div > iframe {
     border-radius: 12px !important;
  }
+
+
+ .rowModifyHome {
+    display: flex;
+    justify-content: space-evenly !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+}
+.rowModifyHome  > div {
+   width: 30% !important;
+display: flex;
+justify-content: center;
+flex-wrap: wrap !important;
+
+align-items: center;
+}
  .ps-related-products h3 {
     color: #f4d637 !important;
 
