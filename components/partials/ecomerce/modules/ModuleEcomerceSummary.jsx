@@ -4,10 +4,11 @@ import Link from "next/link";
 import { connect } from "react-redux";
 
 const ModuleEcomerceSummary = ({ cart, code }) => {
-  console.log(code);
   const [amount, setAmount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
+  const [codepromo, setCodepromo] = useState(0);
+  // setCodepromo(code);
 
   async function getProductByCardItems(cart) {
     const shoppingCart = await getCartItemsHelper(cart);
@@ -38,9 +39,17 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
     }, [dataArray]);
   }
   cacultTotal(cartItems);
-  console.log(total);
 
-  // console.log();
+  function valuepromo(total, code) {
+    console.log("total : ", total);
+    if (code > 0) {
+      console.log("total : ", total);
+      let value = total - total * (code / 100);
+      return value;
+    }
+  }
+
+  console.log(valuepromo(total, code));
 
   let cartItemsViews;
   if (cartItems) {
@@ -78,13 +87,11 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
                 ).toFixed(2)}
                 $ */}
           <span className="color-yellow">
-            {cacultTotal(cartItems) === NaN ||
-            cacultTotal(cartItems) === null ||
-            cacultTotal(cartItems) === undefined ? (
+            {total === NaN || total === null || total === undefined ? (
               <span>0 $</span>
             ) : (
               // METTRE UNE FONCTION OU LE RESULTAT D'UN HOOKS ICI
-              <span>{total - total * (code / 100)}$</span>
+              <span>{`${valuepromo(total, code)}`}$</span>
             )}
           </span>
         </h4>
