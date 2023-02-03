@@ -139,7 +139,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               onChange={handleChange}
             />
             <label htmlFor="shipping-1">
-              Local Delivery <span>+$00.00</span>
+              {`Kinshasa (Local)`} <span>+$00.00</span>
             </label>
           </div>
           <div className="ps-radio">
@@ -170,7 +170,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
             </label>
           </div>
         </div>
-        <div className="ps-block__caculate">
+        {/* <div className="ps-block__caculate">
           <h5>Calculate Shipping</h5>
           <div className="form-group">
             <input
@@ -180,7 +180,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
             />
           </div>
           <button className="ps-btn ps-btn--gray">Update Total</button>
-        </div>
+        </div> */}
         <div className="ps-block__total">
           <h3 className="color-yellow">
             Total<span>{`${price(total, shipping).toFixed(2)}$`}</span>
