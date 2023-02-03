@@ -83,7 +83,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
       }
     }
   };
-
+  let context = react.createContext("Valeur initial");
   let cartItemsViews;
   if (cartItems) {
     cartItemsViews = cartItems.map((item) => (
@@ -188,7 +188,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
         </div>
       </div>
       <div className="ps-block__bottom">
-        <Link href="/shop/checkout" total>
+        <Link href="/shop/checkout" price={price(total, shipping).toFixed(2)}>
           <a className="ps-btn ps-btn--black">Proceed to checkout</a>
         </Link>
       </div>

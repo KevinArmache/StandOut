@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /home/onizuka/.node/corepack/yarn/1.22.15/bin/yarn.js add react-tweet-embed
+  /usr/local/bin/node /home/onizuka/.node/corepack/yarn/1.22.15/bin/yarn.js remove react-router-dom
 
 PATH: 
   /home/onizuka/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
@@ -54,6 +54,8 @@ npm manifest:
       "react-lazyload": "^2.6.5",
       "react-redux": "^7.1.3",
       "react-slick": "^0.27.12",
+      "react-social-media-embed": "^2.3.4",
+      "react-tweet-embed": "^2.0.0",
       "redux": "^4.0.4",
       "redux-devtools-extension": "^2.13.8",
       "redux-persist": "^6.0.0",
@@ -269,6 +271,11 @@ Lockfile:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/@redux-saga/types/-/types-1.1.0.tgz#0e81ce56b4883b4b2a3001ebe1ab298b84237204"
     integrity sha512-afmTuJrylUU/0OtqzaRkbyYFFNgCF73Bvel/sw90pvGrWIZ+vyoIJqA6eMSoA6+nb443kTmulmBtC9NerXboNg==
+  
+  "@remix-run/router@1.3.1":
+    version "1.3.1"
+    resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.3.1.tgz#3bb0b6ddc0a276e8dc1138d08f63035e4e23e8bf"
+    integrity sha512-+eun1Wtf72RNRSqgU7qM2AMX/oHp+dnx7BHk1qhK5ZHzdHTUU4LA1mGG1vT+jMc8sbhG3orvsfOmryjzx2PzQw==
   
   "@types/color-name@^1.1.1":
     version "1.1.1"
@@ -825,6 +832,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
     integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
   
+  classnames@^2.3.2:
+    version "2.3.2"
+    resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+    integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
+  
   clone-deep@^0.3.0:
     version "0.3.0"
     resolved "https://registry.yarnpkg.com/clone-deep/-/clone-deep-0.3.0.tgz#348c61ae9cdbe0edfe053d91ff4cc521d790ede8"
@@ -1065,7 +1077,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.9.1.tgz#201a755f7db5103ed6de63ba93a984141c754541"
     integrity sha512-01NCTBg8cuMJG1OQc6PR7T66+AFYiPwgDvdJmvJBn29NGzIG+DIFxPLNjHzwz3cpFIvG+NcwIjP9hSaPVoOaDg==
   
-  debug@2:
+  debug@2, debug@^2.6.6:
     version "2.6.9"
     resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
     integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
@@ -1298,7 +1310,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/extracted-loader/-/extracted-loader-1.0.4.tgz#e1a3f1791813c14091a1959e261e23e95dd90115"
     integrity sha512-G8A0hT/WCWIjesZm7BwbWdST5dQ08GNnCpTrJT/k/FYzuiJwlV1gyWjnuoizOzAR4jpEYXG2J++JyEKN/EB26Q==
   
-  fast-deep-equal@^3.1.1:
+  fast-deep-equal@3.1.3, fast-deep-equal@^3.1.1:
     version "3.1.3"
     resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
     integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
@@ -1928,6 +1940,11 @@ Lockfile:
     version "0.2.7"
     resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-0.2.7.tgz#7feddf2dcb6edb77d11ef1d117ab5ffdf0ab1b65"
     integrity sha1-f+3fLctu23fRHvHRF6tf/fCrG2U=
+  
+  load-script@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+    integrity sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA==
   
   loader-utils@1.2.3:
     version "1.2.3"
@@ -2560,6 +2577,15 @@ Lockfile:
       object-assign "^4.1.1"
       react-is "^16.8.1"
   
+  prop-types@15.8.1:
+    version "15.8.1"
+    resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+    integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+    dependencies:
+      loose-envify "^1.4.0"
+      object-assign "^4.1.1"
+      react-is "^16.13.1"
+  
   public-encrypt@^4.0.0:
     version "4.0.3"
     resolved "https://registry.yarnpkg.com/public-encrypt/-/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
@@ -3078,7 +3104,7 @@ Lockfile:
       react-transition-group "^2.9.0"
       react-view-pager "^0.6.0"
   
-  react-is@16.13.1, react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.9.0:
+  react-is@16.13.1, react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.9.0:
     version "16.13.1"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
     integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -3152,6 +3178,21 @@ Lockfile:
       use-callback-ref "^1.2.3"
       use-sidecar "^1.0.1"
   
+  react-router-dom@^6.8.0:
+    version "6.8.0"
+    resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.8.0.tgz#5e5f4c4b15fdec3965d2ad9d7460d0c61971e744"
+    integrity sha512-hQouduSTywGJndE86CXJ2h7YEy4HYC6C/uh19etM+79FfQ6cFFFHnHyDlzO4Pq0eBUI96E4qVE5yUjA00yJZGQ==
+    dependencies:
+      "@remix-run/router" "1.3.1"
+      react-router "6.8.0"
+  
+  react-router@6.8.0:
+    version "6.8.0"
+    resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.8.0.tgz#dd61fd1ec44daa2cceaef8e6baa00f99a01a650f"
+    integrity sha512-760bk7y3QwabduExtudhWbd88IBbuD1YfwzpuDUAlJUJ7laIIcqhMvdhSVh1Fur1PE8cGl84L0dxhR3/gvHF7A==
+    dependencies:
+      "@remix-run/router" "1.3.1"
+  
   react-slick@^0.27.12:
     version "0.27.12"
     resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.27.12.tgz#9970d9f040e3ee57ad6e0ab98e4e04bb9dd823ab"
@@ -3163,6 +3204,16 @@ Lockfile:
       lodash.debounce "^4.0.8"
       resize-observer-polyfill "^1.5.0"
   
+  react-social-media-embed@^2.3.4:
+    version "2.3.4"
+    resolved "https://registry.yarnpkg.com/react-social-media-embed/-/react-social-media-embed-2.3.4.tgz#1e0628e606b9e7e4f4bcdc2cde4f9bf0a585b1a0"
+    integrity sha512-2GAXr5V43yRuKhWeLFwhifuPyYUBTAoP/Rw68JxDdZyILc0pgwb80xUkLYWvYBDIp+f+ee/LNWWj/ZaiNceKTA==
+    dependencies:
+      classnames "^2.3.2"
+      react-sub-unsub "^2.1.6"
+      react-twitter-embed "^4.0.4"
+      react-youtube "^10.1.0"
+  
   react-style-singleton@^2.1.0:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/react-style-singleton/-/react-style-singleton-2.1.0.tgz#7396885332e9729957f9df51f08cadbfc164e1c4"
@@ -3171,6 +3222,11 @@ Lockfile:
       get-nonce "^1.0.0"
       invariant "^2.2.4"
       tslib "^1.0.0"
+  
+  react-sub-unsub@^2.1.6:
+    version "2.1.11"
+    resolved "https://registry.yarnpkg.com/react-sub-unsub/-/react-sub-unsub-2.1.11.tgz#173d0803e1d7b29611cb29d95f47ed7798e93642"
+    integrity sha512-FNKy0uD5wSieRE+l5RXaS0bUu6cR8XAXLDwOJnvSDGBMHcWVb1dod8ZkXYjPKtKR74tjYCEpMWcEAWCOoWNXxQ==
   
   react-transition-group@^2.9.0:
     version "2.9.0"
@@ -3181,6 +3237,18 @@ Lockfile:
       loose-envify "^1.4.0"
       prop-types "^15.6.2"
       react-lifecycles-compat "^3.0.4"
+  
+  react-tweet-embed@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/react-tweet-embed/-/react-tweet-embed-2.0.0.tgz#bb8a94bd11bf38ce6c5d9f18f35bf044110a7f40"
+    integrity sha512-g2kfPjSRTOKeJtaQF5EMuSTmp/q8I0qdDs/pZ2qLXZjCWExDT/JgjxSlyM65NyNzsz8072PDpvlO/sIXwwVpdQ==
+  
+  react-twitter-embed@^4.0.4:
+    version "4.0.4"
+    resolved "https://registry.yarnpkg.com/react-twitter-embed/-/react-twitter-embed-4.0.4.tgz#4a6b8354acc266876ff1110b9f648518ea20db6d"
+    integrity sha512-2JIL7qF+U62zRzpsh6SZDXNI3hRNVYf5vOZ1WRcMvwKouw+xC00PuFaD0aEp2wlyGaZ+f4x2VvX+uDadFQ3HVA==
+    dependencies:
+      scriptjs "^2.5.9"
   
   react-view-pager@^0.6.0:
     version "0.6.0"
@@ -3193,6 +3261,15 @@ Lockfile:
       react-motion "^0.5.0"
       resize-observer-polyfill "1.5.0"
       tabbable "1.1.2"
+  
+  react-youtube@^10.1.0:
+    version "10.1.0"
+    resolved "https://registry.yarnpkg.com/react-youtube/-/react-youtube-10.1.0.tgz#7e5670c764f12eb408166e8eb438d788dc64e8b5"
+    integrity sha512-ZfGtcVpk0SSZtWCSTYOQKhfx5/1cfyEW1JN/mugGNfAxT3rmVJeMbGpA9+e78yG21ls5nc/5uZJETE3cm3knBg==
+    dependencies:
+      fast-deep-equal "3.1.3"
+      prop-types "15.8.1"
+      youtube-player "5.5.2"
   
   react@^18.2.0:
     version "18.2.0"
@@ -3355,6 +3432,11 @@ Lockfile:
       ajv "^6.12.4"
       ajv-keywords "^3.5.2"
   
+  scriptjs@^2.5.9:
+    version "2.5.9"
+    resolved "https://registry.yarnpkg.com/scriptjs/-/scriptjs-2.5.9.tgz#343915cd2ec2ed9bfdde2b9875cd28f59394b35f"
+    integrity sha512-qGVDoreyYiP1pkQnbnFAUIS5AjenNwwQBdl7zeos9etl+hYKWahjRTfzAZZYBv5xNHx7vNKCmaLDQZ6Fr2AEXg==
+  
   scroll-into-view-if-needed@^2.2.25:
     version "2.2.26"
     resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.26.tgz#e4917da0c820135ff65ad6f7e4b7d7af568c4f13"
@@ -3416,6 +3498,11 @@ Lockfile:
     version "1.7.2"
     resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
     integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+  
+  sister@^3.0.0:
+    version "3.0.2"
+    resolved "https://registry.yarnpkg.com/sister/-/sister-3.0.2.tgz#bb3e39f07b1f75bbe1945f29a27ff1e5a2f26be4"
+    integrity sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==
   
   slick-carousel@^1.8.1:
     version "1.8.1"
@@ -3932,3 +4019,12 @@ Lockfile:
     version "0.1.0"
     resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
     integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+  
+  youtube-player@5.5.2:
+    version "5.5.2"
+    resolved "https://registry.yarnpkg.com/youtube-player/-/youtube-player-5.5.2.tgz#052b86b1eabe21ff331095ffffeae285fa7f7cb5"
+    integrity sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ==
+    dependencies:
+      debug "^2.6.6"
+      load-script "^1.0.0"
+      sister "^3.0.0"

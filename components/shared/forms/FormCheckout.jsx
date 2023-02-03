@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import ModuleCheckoutSummary from "~/components/shared/forms/modules/ModuleCheckoutSummary";
 const FormCheckout = () => {
   const [firstName, setFirstName] = useState("");
@@ -13,6 +15,9 @@ const FormCheckout = () => {
   const [telephone, setTelephone] = useState("");
   const [note, setNote] = useState("");
 
+  const location = useLocation();
+  const price = location.price;
+  console.log(price);
   return (
     <form className="ps-form--checkout" action="index.html" method="get">
       <div className="row">
