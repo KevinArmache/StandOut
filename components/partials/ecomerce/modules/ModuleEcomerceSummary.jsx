@@ -7,9 +7,10 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
   const [amount, setAmount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
-  const [codepromo, setCodepromo] = useState(0);
+  // const [promoprice, setPromoprice] = useState(0);
+  const [shipping, setShipping] = useState("true");
   // setCodepromo(code);
-
+  let promoprice = 0;
   async function getProductByCardItems(cart) {
     const shoppingCart = await getCartItemsHelper(cart);
     if (shoppingCart) {
@@ -43,13 +44,26 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
   function valuepromo(total, code) {
     if (code > 0) {
       let value = total - total * (code / 100);
-
+      // setPromoprice(value);
+      // promoprice = value;
       return parseFloat(value).toFixed(2);
+    } else {
+      return;
     }
   }
 
   console.log(valuepromo(total, code));
 
+  const handleChange = (event) => {
+    setShipping(event.target.value);
+  };
+
+  const price = (total, promoprice, shipping) => {
+    console.log(total);
+    console.log(promoprice);
+    console.log(shipping);
+  };
+  price(total, promoprice, shipping);
   let cartItemsViews;
   if (cartItems) {
     cartItemsViews = cartItems.map((item) => (
@@ -78,7 +92,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
           </span>
         </h4>
         <h4 className="color-white">
-          With coupon code <span className="color-yellow">{`${code} %`}</span>
+          With coupon code <span className="color-yellow">{`-${code} %`}</span>
           <span className="color-yellow">
             {total === NaN ||
             total === null ||
@@ -101,6 +115,8 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               type="radio"
               id="shipping-1"
               name="shipping"
+              value="Free Shipping"
+              onChange={handleChange}
             />
             <label htmlFor="shipping-1">
               Free Shipping <span>+$00.00</span>
@@ -112,6 +128,8 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               type="radio"
               id="shipping-2"
               name="shipping"
+              value="Flat Rate"
+              onChange={handleChange}
             />
             <label htmlFor="shipping-2">
               Flat Rate <span>+$10.00</span>
@@ -123,6 +141,9 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               type="radio"
               id="shipping-3"
               name="shipping"
+              value="Local Delivery"
+              // checked={selected === "true"}
+              onChange={handleChange}
             />
             <label htmlFor="shipping-3">
               Local Delivery <span>+$20.00</span>
