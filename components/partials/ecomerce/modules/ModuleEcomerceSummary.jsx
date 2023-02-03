@@ -62,22 +62,22 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
   const price = (total, shipping) => {
     let promoprice = valuepromo(total, code);
     if (promoprice > 0 && promoprice !== 0) {
-      if (shipping === "Free Shipping") {
-        return parseInt(promoprice) + 0.0;
-      } else if (shipping === "Flat Rate") {
-        return parseInt(promoprice) + 10.0;
-      } else if (shipping === "Local Delivery") {
-        return parseInt(promoprice) + 20.0;
+      if (shipping === "Local Delivery") {
+        return parseInt(promoprice) + 0;
+      } else if (shipping === "KPM Logistics") {
+        return parseInt(promoprice) + 20;
+      } else if (shipping === "DHL") {
+        return parseInt(promoprice) + 100;
       } else {
         return parseInt(promoprice);
       }
     } else if (promoprice === 0) {
-      if (shipping === "Free Shipping") {
+      if (shipping === "Local Delivery") {
         return total + 0;
-      } else if (shipping === "Flat Rate") {
-        return total + 10;
-      } else if (shipping === "Local Delivery") {
+      } else if (shipping === "KPM Logistics") {
         return total + 20;
+      } else if (shipping === "DHL") {
+        return total + 100;
       } else {
         return total;
       }
@@ -135,11 +135,11 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               type="radio"
               id="shipping-1"
               name="shipping"
-              value="Free Shipping"
+              value="Local Delivery"
               onChange={handleChange}
             />
             <label htmlFor="shipping-1">
-              Free Shipping <span>+$00.00</span>
+              Local Delivery <span>+$00.00</span>
             </label>
           </div>
           <div className="ps-radio">
@@ -148,11 +148,11 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               type="radio"
               id="shipping-2"
               name="shipping"
-              value="Flat Rate"
+              value="KPM Logistics"
               onChange={handleChange}
             />
             <label htmlFor="shipping-2">
-              Flat Rate <span>+$10.00</span>
+              KPM Logistics <span>+$20.00</span>
             </label>
           </div>
           <div className="ps-radio">
@@ -161,12 +161,12 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
               type="radio"
               id="shipping-3"
               name="shipping"
-              value="Local Delivery"
+              value="DHL"
               // checked={selected === "true"}
               onChange={handleChange}
             />
             <label htmlFor="shipping-3">
-              Local Delivery <span>+$20.00</span>
+              DHL <span>+$100.00</span>
             </label>
           </div>
         </div>
