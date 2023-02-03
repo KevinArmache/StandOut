@@ -10,7 +10,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
   // const [promoprice, setPromoprice] = useState(0);
   const [shipping, setShipping] = useState("true");
   // setCodepromo(code);
-  let promoprice = 0;
+
   async function getProductByCardItems(cart) {
     const shoppingCart = await getCartItemsHelper(cart);
     if (shoppingCart) {
@@ -43,27 +43,47 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
 
   function valuepromo(total, code) {
     if (code > 0) {
-      let value = total - total * (code / 100);
+      let value = 0;
+      value = total - total * (code / 100);
       // setPromoprice(value);
-      // promoprice = value;
+
       return parseFloat(value).toFixed(2);
     } else {
-      return;
+      return 0;
     }
   }
 
-  console.log(valuepromo(total, code));
+  // console.log(valuepromo(total, code));
 
   const handleChange = (event) => {
     setShipping(event.target.value);
   };
 
-  const price = (total, promoprice, shipping) => {
-    console.log(total);
-    console.log(promoprice);
-    console.log(shipping);
+  const price = (total, shipping) => {
+    let promoprice = valuepromo(total, code);
+    if (promoprice > 0 && promoprice !== 0) {
+      if (shipping === "Free Shipping") {
+        return parseInt(promoprice) + 0.0;
+      } else if (shipping === "Flat Rate") {
+        return parseInt(promoprice) + 10.0;
+      } else if (shipping === "Local Delivery") {
+        return parseInt(promoprice) + 20.0;
+      } else {
+        return parseInt(promoprice);
+      }
+    } else if (promoprice === 0) {
+      if (shipping === "Free Shipping") {
+        return total + 0;
+      } else if (shipping === "Flat Rate") {
+        return total + 10;
+      } else if (shipping === "Local Delivery") {
+        return total + 20;
+      } else {
+        return total;
+      }
+    }
   };
-  price(total, promoprice, shipping);
+
   let cartItemsViews;
   if (cartItems) {
     cartItemsViews = cartItems.map((item) => (
@@ -85,7 +105,7 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
           Subtotal
           <span className="color-yellow">
             {total === NaN || total === null || total === undefined ? (
-              <span>0 $</span>
+              <span>$</span>
             ) : (
               <span>{total} $</span>
             )}
@@ -162,8 +182,8 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
           <button className="ps-btn ps-btn--gray">Update Total</button>
         </div>
         <div className="ps-block__total">
-          <h3>
-            Total<span>$199.70</span>
+          <h3 className="color-yellow">
+            Total<span>{`${price(total, shipping).toFixed(2)}$`}</span>
           </h3>
         </div>
       </div>
