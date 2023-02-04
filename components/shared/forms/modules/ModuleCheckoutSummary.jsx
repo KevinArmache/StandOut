@@ -18,6 +18,8 @@ const ModuleCheckoutSummary = ({
   note,
   data,
 }) => {
+  const [payment, setPayment] = useState("");
+
   const ButtonCheckOut = () => {
     if (
       telephone === "" ||
@@ -26,7 +28,8 @@ const ModuleCheckoutSummary = ({
       country === "" ||
       address === "" ||
       city === "" ||
-      email === ""
+      email === "" ||
+      payment === ""
     ) {
       //   console.log("vide");
       return (
@@ -35,16 +38,29 @@ const ModuleCheckoutSummary = ({
         </span>
       );
     } else {
-      return (
+      if (payment === "Paypal") {
         // <Link href="/shop/checkout-success">
-        <a
-          className="ps-btn ps-btn--fullwidth ps-btn--black"
-          href={`https://api.maxicashapp.com/PayEntry?data={PayType: "MaxiCash",Amount: ${convertCentime},Currency: "maxiDollar",Telephone: ${telephone},MerchantID: "92c52d36dcb548b697adf342902049b6",MerchantPassword: "689ef565a804482fb64155271fcda878",Language:"fr",Reference: "01",Accepturl: "https://facebook.com",Declineurl: "https://facebook.com",Cancelurl: "https://twitter.com",NotifyURL: "https://netlify.com"}`}
-        >
-          Process to checkout
-        </a>
+
+        // <a
+        //   className="ps-btn ps-btn--fullwidth ps-btn--black"
+        //   href={`https://api.maxicashapp.com/PayEntry?data={PayType: "MaxiCash",Amount: ${convertCentime},Currency: "maxiDollar",Telephone: ${telephone},MerchantID: "92c52d36dcb548b697adf342902049b6",MerchantPassword: "689ef565a804482fb64155271fcda878",Language:"fr",Reference: "01",Accepturl: "https://facebook.com",Declineurl: "https://facebook.com",Cancelurl: "https://twitter.com",NotifyURL: "https://netlify.com"}`}
+        // >
+        //   Process to checkout
+        // </a>
         // </Link>
-      );
+        return <p>Paypal</p>;
+      } else {
+        // <Link href="/shop/checkout-success">
+
+        // <a
+        //   className="ps-btn ps-btn--fullwidth ps-btn--black"
+        //   href={`https://api.maxicashapp.com/PayEntry?data={PayType: "MaxiCash",Amount: ${convertCentime},Currency: "maxiDollar",Telephone: ${telephone},MerchantID: "92c52d36dcb548b697adf342902049b6",MerchantPassword: "689ef565a804482fb64155271fcda878",Language:"fr",Reference: "01",Accepturl: "https://facebook.com",Declineurl: "https://facebook.com",Cancelurl: "https://twitter.com",NotifyURL: "https://netlify.com"}`}
+        // >
+        //   Process to checkout
+        // </a>
+        // </Link>
+        return <p>Visa</p>;
+      }
     }
   };
   const [cartItems, setCartItems] = useState([]);
@@ -127,6 +143,16 @@ const ModuleCheckoutSummary = ({
       </figcaption>;
     }
   }
+
+  const handleChange = (event) => {
+    setPayment(event.target.value);
+
+    if (payment === "Paypal") {
+      return <p>Paypal</p>;
+    } else {
+      return <p>Visa</p>;
+    }
+  };
   return (
     <div className="ps-block--checkout-order">
       <div className="ps-block__content">
@@ -161,8 +187,10 @@ const ModuleCheckoutSummary = ({
               type="radio"
               id="payment-method-1"
               name="payment-method"
+              value="Visa"
+              onChange={handleChange}
             />
-            <label htmlFor="payment-method-1">Direct bank transfer</label>
+            <label htmlFor="payment-method-1">Visa</label>
           </div>
           <div className="ps-radio">
             <input
@@ -170,6 +198,8 @@ const ModuleCheckoutSummary = ({
               type="radio"
               id="payment-method-2"
               name="payment-method"
+              value="Paypal"
+              onChange={handleChange}
             />
             <label htmlFor="payment-method-2">Paypal</label>
           </div>
@@ -188,7 +218,7 @@ const ModuleCheckoutSummary = ({
           >
             Process to checkout
           </a> */}
-
+        {/* {handleChange()} */}
         {ButtonCheckOut()}
 
         {/*<button className="ps-btn ps-btn--fullwidth ps-btn--black">
@@ -198,5 +228,13 @@ const ModuleCheckoutSummary = ({
     </div>
   );
 };
+// <Link href="/shop/checkout-success">
 
+// <a
+//   className="ps-btn ps-btn--fullwidth ps-btn--black"
+//   href={`https://api.maxicashapp.com/PayEntry?data={PayType: "MaxiCash",Amount: ${convertCentime},Currency: "maxiDollar",Telephone: ${telephone},MerchantID: "92c52d36dcb548b697adf342902049b6",MerchantPassword: "689ef565a804482fb64155271fcda878",Language:"fr",Reference: "01",Accepturl: "https://facebook.com",Declineurl: "https://facebook.com",Cancelurl: "https://twitter.com",NotifyURL: "https://netlify.com"}`}
+// >
+//   Process to checkout
+// </a>
+// </Link>
 export default connect((state) => state.cart)(ModuleCheckoutSummary);
