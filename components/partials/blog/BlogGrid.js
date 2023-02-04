@@ -112,23 +112,23 @@ const BlogGrid = ({ collectionSlug, column }) => {
               />
               <TweetEmbed
                 tweetId="1586889325320572928"
-                options={{ theme: "dark" }}
+                options={{ theme: "light" }}
               />
               <TweetEmbed
                 tweetId="1389272778382188544"
-                options={{ theme: "dark" }}
+                options={{ theme: "light" }}
               />
               <TweetEmbed
                 tweetId="1389272815312965642"
-                options={{ theme: "dark" }}
+                options={{ theme: "light" }}
               />
               <TweetEmbed
                 tweetId="1389160892030402560"
-                options={{ theme: "dark" }}
+                options={{ theme: "light" }}
               />
               <TweetEmbed
                 tweetId="1130416134640099328"
-                options={{ theme: "dark" }}
+                options={{ theme: "light" }}
               />
               {/* INSTAGRAM IFRAME */}
               <div>
