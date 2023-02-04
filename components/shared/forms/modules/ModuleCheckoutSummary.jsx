@@ -29,7 +29,8 @@ const ModuleCheckoutSummary = ({
       address === "" ||
       city === "" ||
       email === "" ||
-      payment === ""
+      payment === "" ||
+      data.shipping === ""
     ) {
       //   console.log("vide");
       return (
