@@ -167,14 +167,14 @@ const ModuleCheckoutSummary = ({
           {checkcodepromo(data, totalFinal)}
         </figure>
         <figure className="ps-block__shipping">
-          <h3>Shipping</h3>
+          <h3 className="color-yellow">Shipping</h3>
           {checkshipping(data)}
           <p>Enter your address to view shipping options.</p>
         </figure>
         <figure className="ps-block__total">
           <figcaption>
             Total
-            <span>
+            <span className="color-yellow">
               <strong>{data.price}$ </strong>
             </span>
           </figcaption>

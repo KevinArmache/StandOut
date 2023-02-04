@@ -54,7 +54,9 @@ const EcomerceShoppingCart = () => {
                 placeholder="Enter your code"
                 onChange={handleChange}
               />
-              <a onClick={() => handleClick(value)}>Apply</a>
+              <a className="color-yellow" onClick={() => handleClick(value)}>
+                Apply
+              </a>
             </div>
             <span className="color-yellow">{response}</span>
           </div>
