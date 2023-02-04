@@ -170,6 +170,10 @@ const ModuleCheckoutSummary = ({
           <h3 className="color-yellow">Shipping</h3>
           {checkshipping(data)}
           <p>Enter your address to view shipping options.</p>
+          <p className="advert">
+            If you forgot to put a shipping method, be sure to return to the
+            previous page, otherwise you will not be able to make your payment.
+          </p>
         </figure>
         <figure className="ps-block__total">
           <figcaption>
@@ -211,6 +215,10 @@ const ModuleCheckoutSummary = ({
             experience throughout this website, and for other purposes described
             in our
             <a href="#"> privacy policy.</a>
+          </p>
+          <p className="advert">
+            it is required to fill in all the fields in order to make your
+            payment
           </p>
         </figure>
       </div>
