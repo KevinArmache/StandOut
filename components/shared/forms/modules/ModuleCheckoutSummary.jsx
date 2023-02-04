@@ -214,7 +214,10 @@ const ModuleCheckoutSummary = ({
             Your personal data will be used to process your order, support your
             experience throughout this website, and for other purposes described
             in our
-            <a href="#"> privacy policy.</a>
+            <a href="#" className="color-yellow">
+              {" "}
+              privacy policy.
+            </a>
           </p>
           <p className="advert">
             it is required to fill in all the fields in order to make your
