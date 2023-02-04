@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /home/onizuka/.node/corepack/yarn/1.22.15/bin/yarn.js remove react-router-dom
+  /usr/local/bin/node /home/onizuka/.node/corepack/yarn/1.22.15/bin/yarn.js add react-router-dom
 
 PATH: 
   /home/onizuka/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin

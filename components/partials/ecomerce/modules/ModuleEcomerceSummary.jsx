@@ -4,11 +4,10 @@ import Link from "next/link";
 import { connect } from "react-redux";
 
 const ModuleEcomerceSummary = ({ cart, code }) => {
-  const [amount, setAmount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
   // const [promoprice, setPromoprice] = useState(0);
-  const [shipping, setShipping] = useState("true");
+  const [shipping, setShipping] = useState("");
   // setCodepromo(code);
 
   async function getProductByCardItems(cart) {
@@ -59,31 +58,40 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
     setShipping(event.target.value);
   };
 
-  const price = (total, shipping) => {
+  let shippingprice = {
+    DHL: 100,
+    KPM: 20,
+    LOCAL: 0,
+  };
+
+  const price = (total, shipping, shippingprice) => {
     let promoprice = valuepromo(total, code);
     if (promoprice > 0 && promoprice !== 0) {
       if (shipping === "Local Delivery") {
-        return parseInt(promoprice) + 0;
+        return parseInt(promoprice) + shippingprice.LOCAL;
       } else if (shipping === "KPM Logistics") {
-        return parseInt(promoprice) + 20;
+        return parseInt(promoprice) + shippingprice.KPM;
       } else if (shipping === "DHL") {
-        return parseInt(promoprice) + 100;
+        return parseInt(promoprice) + shippingprice.DHL;
       } else {
         return parseInt(promoprice);
       }
     } else if (promoprice === 0) {
       if (shipping === "Local Delivery") {
-        return total + 0;
+        return total + shippingprice.LOCAL;
       } else if (shipping === "KPM Logistics") {
-        return total + 20;
+        return total + shippingprice.KPM;
       } else if (shipping === "DHL") {
-        return total + 100;
+        return total + shippingprice.DHL;
       } else {
         return total;
       }
     }
   };
-  let context = react.createContext("Valeur initial");
+  let lastprice = price(total, shipping, shippingprice);
+  let lastshipping = shipping;
+  let lastcode = code;
+  // let context = react.createContext("Valeur initial");
   let cartItemsViews;
   if (cartItems) {
     cartItemsViews = cartItems.map((item) => (
@@ -183,12 +191,25 @@ const ModuleEcomerceSummary = ({ cart, code }) => {
         </div> */}
         <div className="ps-block__total">
           <h3 className="color-yellow">
-            Total<span>{`${price(total, shipping).toFixed(2)}$`}</span>
+            Total
+            <span>{`${price(total, shipping, shippingprice).toFixed(
+              2
+            )}$`}</span>
+            {/* <Transfer price={price(total, shipping).toFixed(2)} /> */}
           </h3>
         </div>
       </div>
       <div className="ps-block__bottom">
-        <Link href="/shop/checkout" price={price(total, shipping).toFixed(2)}>
+        <Link
+          href={{
+            pathname: "/shop/checkout",
+            query: {
+              price: lastprice,
+              shipping: lastshipping,
+              code: lastcode,
+            }, // the data
+          }}
+        >
           <a className="ps-btn ps-btn--black">Proceed to checkout</a>
         </Link>
       </div>

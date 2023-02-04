@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 
 import ModuleCheckoutSummary from "~/components/shared/forms/modules/ModuleCheckoutSummary";
 const FormCheckout = () => {
@@ -15,9 +15,9 @@ const FormCheckout = () => {
   const [telephone, setTelephone] = useState("");
   const [note, setNote] = useState("");
 
-  const location = useLocation();
-  const price = location.price;
-  console.log(price);
+  const router = useRouter();
+  const data = router.query;
+  console.log(data);
   return (
     <form className="ps-form--checkout" action="index.html" method="get">
       <div className="row">
@@ -188,6 +188,7 @@ const FormCheckout = () => {
               email={email}
               telephone={telephone}
               note={note}
+              data={data}
             />
           </div>
         </div>

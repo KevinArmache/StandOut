@@ -16,6 +16,7 @@ const ModuleCheckoutSummary = ({
   email,
   telephone,
   note,
+  data,
 }) => {
   const ButtonCheckOut = () => {
     if (
@@ -74,7 +75,9 @@ const ModuleCheckoutSummary = ({
       </Link>
     ));
   }
-
+  {
+    console.log(data);
+  }
   function total(dataArray) {
     const [total, setTotal] = useState(0);
     useEffect(() => {
@@ -93,6 +96,37 @@ const ModuleCheckoutSummary = ({
     return total;
   }
   let convertCentime = total(cartItems) * 100;
+
+  function checkshipping(data) {
+    if (data.shipping === "DHL") {
+      return (
+        <span className="color-yellow">
+          <strong>{data.shipping} +100$ </strong>
+        </span>
+      );
+    } else if (data.shipping === "KPM Logistics") {
+      <span className="color-yellow">
+        <strong> {data.shipping} +20$ </strong>
+      </span>;
+    } else if (data.shipping === "Local Delivery") {
+      <span className="color-yellow">
+        <strong> {data.shipping} +0$ </strong>
+      </span>;
+    }
+  }
+  function checkcodepromo(data) {
+    if (data.code > 0) {
+      return (
+        <figcaption>
+          With coupon code<span> - {data.code}%</span>
+        </figcaption>
+      );
+    } else {
+      <figcaption>
+        With coupon code<span> - 0%</span>
+      </figcaption>;
+    }
+  }
   return (
     <div className="ps-block--checkout-order">
       <div className="ps-block__content">
@@ -111,11 +145,13 @@ const ModuleCheckoutSummary = ({
         </figure>
         <figure className="ps-block__shipping">
           <h3>Shipping</h3>
+          {checkshipping(data)}
           <p>Enter your address to view shipping options.</p>
         </figure>
         <figure className="ps-block__total">
+          {checkcodepromo(data)}
           <figcaption>
-            Total<span>165.90$</span>
+            Total<span>{data.price}$</span>
           </figcaption>
         </figure>
         <figure className="ps-block__payment-methods">

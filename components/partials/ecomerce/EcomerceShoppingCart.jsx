@@ -59,6 +59,7 @@ const EcomerceShoppingCart = () => {
             <span className="color-yellow">{response}</span>
           </div>
         </div>
+
         <ModuleEcomerceSummary code={code} pourcentage={pourcentage} />
       </div>
     </div>
