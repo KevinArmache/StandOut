@@ -174,8 +174,8 @@ const ModuleCheckoutSummary = ({
         <figure className="ps-block__total">
           <figcaption>
             Total
-            <span className="color-yellow">
-              <strong>{data.price}$ </strong>
+            <span>
+              <strong className="color-yellow">{data.price}$ </strong>
             </span>
           </figcaption>
         </figure>
@@ -189,7 +189,9 @@ const ModuleCheckoutSummary = ({
               value="Visa"
               onChange={handleChange}
             />
-            <label htmlFor="payment-method-1">Visa</label>
+            <label htmlFor="payment-method-1" className="color-white">
+              Visa
+            </label>
           </div>
           <div className="ps-radio">
             <input
@@ -200,7 +202,9 @@ const ModuleCheckoutSummary = ({
               value="Paypal"
               onChange={handleChange}
             />
-            <label htmlFor="payment-method-2">Paypal</label>
+            <label htmlFor="payment-method-2" className="color-white">
+              Paypal
+            </label>
           </div>
           <p>
             Your personal data will be used to process your order, support your
