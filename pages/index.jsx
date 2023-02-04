@@ -8,7 +8,6 @@ import HomeDefaultDealOfDay from "~/components/partials/homepages/home-default/H
 import HomeDefaultNewArrival from "~/components/partials/homepages/home-default/HomeDefaultNewArrival";
 import HomeDefaultBanner from "~/components/partials/homepages/home-default/HomeDefaultBanner";
 import HomeDefaultTopSellers from "~/components/partials/homepages/home-default/HomeDefaultTopSellers";
-import { BrowserRouter } from "react-router-dom";
 
 const HomeDefaultPage = () => {
   return (

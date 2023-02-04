@@ -112,35 +112,30 @@ const ModuleCheckoutSummary = ({
     }, [dataArray]);
     return total;
   }
-  let convertCentime = total(cartItems) * 100;
+  let totalFinal = total(cartItems);
 
   function checkshipping(data) {
     if (data.shipping === "DHL") {
-      return (
-        <span className="color-yellow">
-          <strong>{data.shipping} +100$ </strong>
-        </span>
-      );
+      return <span className="color-yellow">{data.shipping} +100$</span>;
     } else if (data.shipping === "KPM Logistics") {
-      <span className="color-yellow">
-        <strong> {data.shipping} +20$ </strong>
-      </span>;
+      return <span className="color-yellow">{data.shipping} +20$</span>;
     } else if (data.shipping === "Local Delivery") {
-      <span className="color-yellow">
-        <strong> {data.shipping} +0$ </strong>
-      </span>;
+      return <span className="color-yellow">{data.shipping} +0$</span>;
     }
   }
-  function checkcodepromo(data) {
+  function checkcodepromo(data, total) {
     if (data.code > 0) {
       return (
         <figcaption>
-          With coupon code<span> - {data.code}%</span>
+          <strong>With coupon code</strong>
+          <small> - {data.code}%</small>
+          <small>{total - total * (data.code / 100)}$</small>
         </figcaption>
       );
     } else {
       <figcaption>
-        With coupon code<span> - 0%</span>
+        <strong>With coupon code</strong>
+        <small> - 0%</small>
       </figcaption>;
     }
   }
@@ -169,6 +164,7 @@ const ModuleCheckoutSummary = ({
             <strong>Subtotal</strong>
             <small>{total(cartItems)}$</small>
           </figcaption>
+          {checkcodepromo(data, totalFinal)}
         </figure>
         <figure className="ps-block__shipping">
           <h3>Shipping</h3>
@@ -176,9 +172,11 @@ const ModuleCheckoutSummary = ({
           <p>Enter your address to view shipping options.</p>
         </figure>
         <figure className="ps-block__total">
-          {checkcodepromo(data)}
           <figcaption>
-            Total<span>{data.price}$</span>
+            Total
+            <span>
+              <strong>{data.price}$ </strong>
+            </span>
           </figcaption>
         </figure>
         <figure className="ps-block__payment-methods">
