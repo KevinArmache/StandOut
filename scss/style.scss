@@ -671,3 +671,55 @@ background-image: url('/static/img/bg/home-default/3.png');
     background-image: url('/static/img/bg/home-default/21.png');
     }
 
+
+
+// KEVIN TEST
+
+.container-discovery {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.container-item  {
+  width: 30%;
+
+}
+
+@media screen and (max-width: 800px) {
+  .container-item  {
+    width: 45%;
+  
+  }
+}
+@media screen and (max-width: 600px) {
+  .container-item  {
+    width: 75%;
+    margin: 20px;
+  
+  }
+}
+@media screen and (max-width: 400px) {
+  .container-item  {
+    width: 95%;
+    margin: 20px;
+  
+  }
+}
+.container-item  > div {
+  margin: 0 auto;
+text-align: center;
+}
+.image-item > img {
+  width: 300px;
+  height: 300px;
+}
+
+.text-item > span {
+  font-size: 20px;
+  font-style: oblique;
+}
+.text-item > h4 {
+  font-size: 50px;
+}
