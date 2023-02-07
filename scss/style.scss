@@ -41,10 +41,10 @@
         6. CUSTOM
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
 @import "utils/mixin";
 @import "vendor/media_query";
@@ -736,9 +736,9 @@ body {
   height: 300px;
   object-fit: cover;
 }
-.new-font {
-  // font-family: 'Josefin Sans', sans-serif;
-  // font-family: 'Righteous', cursive;
-  // font-family: 'Sen', sans-serif;
-  font-family: 'Carter One', cursive;
-}
+// .new-font {
+//   // font-family: 'Josefin Sans', sans-serif;
+//   // font-family: 'Righteous', cursive;
+//   // font-family: 'Sen', sans-serif;
+//   font-family: 'Carter One', cursive;
+// }
