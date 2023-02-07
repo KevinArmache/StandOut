@@ -19,12 +19,14 @@ const HomeDefaultBanner = () => {
   return (
     <div className="ps-home-banner">
       <Slider {...carouselSetting} className="ps-carousel">
-        <div className="carousel-item">
+        <div className="carousel-item center-element">
           <div
-            className="ps-banner--3 bg--cover white"
-            style={{
-              background: `url(/static/img/bg/home-default/3.png)`,
-            }}
+            className="ps-banner--3 bg--cover white image-home-carousel center-element"
+            // style={{
+            //   width: "300px",
+            //   height: "300px",
+            //   background: `url(/static/img/bg/home-default/1111.jpg)`,
+            // }}
           >
             <div className="ps-banner__content">
               {/* <p>Melanin Hat</p> */}
@@ -36,28 +38,32 @@ const HomeDefaultBanner = () => {
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item center-element">
           <div
-            className="ps-banner--3 bg--top-left right"
-            style={{
-              background: `url(/static/img/bg/home-default/2.jpg)`,
-            }}
+            className="ps-banner--3 bg--top-left right image-home-carousel2"
+            // style={{
+            //   width: "100%",
+            //   height: "300px",
+            //   background: `url(/static/img/bg/home-default/22.jpg)`,
+            // }}
           >
             <div className="ps-banner__content">
               {/* <p>Standout Swear</p> */}
-              <h3>Ace of spades</h3>
+              <h3 className="color-white">Ace of spades</h3>
               <a className="ps-link--under" href="#">
                 Discover more
               </a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item center-element ">
           <div
-            className="ps-banner--3 bg--top-right"
-            style={{
-              background: `url(/static/img/bg/home-default/1.jpg)`,
-            }}
+            className="ps-banner--3 bg--top-right image-home-carousel3"
+            // style={{
+            //   width: "100%",
+            //   height: "300px",
+            //   background: `url(/static/img/bg/home-default/21.jpg)`,
+            // }}
           >
             <div className="ps-banner__content">
               {/* <p>T-shirt Standout </p> */}
