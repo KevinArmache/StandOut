@@ -481,3 +481,97 @@ body {
   color: #f4d637 !important;
   font-weight: bold;
 }
+
+.image-trendy {
+  // object-fit: cover !important; 
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute;
+  top: 50% !important; 
+  right: 50% !important; 
+  transform: translate(25%, -50%) !important;
+
+}
+
+.image-best-seller {
+  // object-fit: cover !important; 
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute;
+  top: 50% !important; 
+  right: 50% !important; 
+  transform: translate(25%, -50%) !important;
+
+}
+.image-new-arrival {
+  // object-fit: cover !important; 
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute;
+  top: 50% !important; 
+  right: 75% !important; 
+  transform: translate(25%, -50%) !important;
+
+}
+
+.image-welcome {
+  // object-fit: cover !important; 
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute;
+  top: 50% !important; 
+  right: 50% !important; 
+  transform: translate(25%, -50%) !important;
+}
+
+@media screen and (max-width: 400px) {
+
+  .image-trendy {
+    // object-fit: cover !important; 
+    width: 300px !important;
+    height: 300px !important;
+    position: absolute;
+    top: 50% !important; 
+    right: 50% !important; 
+    transform: translate(25%, -50%) !important;
+  
+  }
+  
+  .image-best-seller {
+    // object-fit: cover !important; 
+    width: 300px !important;
+    height: 300px !important;
+    position: absolute;
+    top: 50% !important; 
+    right: 50% !important; 
+    transform: translate(5%, -50%) !important;
+  
+  }
+  .image-new-arrival {
+    // object-fit: cover !important; 
+    width: 300px !important;
+    height: 300px !important;
+    position: absolute;
+    top: 50% !important; 
+    right: 75% !important; 
+    transform: translate(25%, -50%) !important;
+  
+  }
+  
+  .image-welcome {
+    // object-fit: cover !important; 
+    width: 100% !important;
+    height: 100% !important;
+    // position: absolute !important;
+    // top: 50% !important; 
+    // right: 50% !important; 
+    // transform: translate(25%, -50%) !important;
+  }
+  .text-right{
+    text-align: right;
+  }
+}
+
+// .ps-home-collection-2 .ps-block--collection-2 {
+//   height: 0px !important;
+// }

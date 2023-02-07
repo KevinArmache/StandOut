@@ -7,14 +7,14 @@ const HomeDefaultCollection = () => {
       <figure>
         <div className="ps-block--collection-2 left">
           <div
-            className="ps-block__thumbnail bg--top-right"
+            className="ps-block__thumbnail bg--top-right image-new-arrival"
             style={{
               backgroundImage:
                 "url('/static/img/homepage/home-right-to-left/collection/1.jpg')",
             }}
           ></div>
           <div className="ps-block__content">
-            <span className="color-yellow-black">Top Tendencies </span>
+            <span className="color-yellow-black">Top Tendencies</span>
             <h4 className="color-white">New Arrival</h4>
             <Link href="/shop">
               <a href="#new-arrival" className="ps-link--under">
@@ -25,12 +25,13 @@ const HomeDefaultCollection = () => {
         </div>
       </figure>
       <figure>
-        <div className="ps-block--collection-2 center white">
+        {/* <div className="ps-block--collection-2 center white"> */}
+        <div className="ps-block--collection-2 right white">
           <div
-            className="ps-block__thumbnail bg--cover"
+            className="ps-block__thumbnail bg--cover  image-best-seller"
             style={{
               backgroundImage:
-                "url('/static/img/homepage/home-right-to-left/collection/2.png')",
+                "url('/static/img/homepage/home-right-to-left/collection/2.jpg')",
             }}
           ></div>
           <div className="ps-block__content">
@@ -45,9 +46,9 @@ const HomeDefaultCollection = () => {
         </div>
       </figure>
       <figure>
-        <div className="ps-block--collection-2 right">
+        <div className="ps-block--collection-2 left">
           <div
-            className="ps-block__thumbnail bg--top-left"
+            className="ps-block__thumbnail bg--top-left image-trendy"
             style={{
               backgroundImage:
                 "url('/static/img/homepage/home-right-to-left/collection/3.jpg')",
