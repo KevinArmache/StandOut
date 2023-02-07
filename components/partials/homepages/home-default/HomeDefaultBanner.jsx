@@ -32,7 +32,7 @@ const HomeDefaultBanner = () => {
               {/* <p>Melanin Hat</p> */}
 
               <h3 className="color-yellow">Welcome</h3>
-              <a className="ps-link--under" href="#">
+              <a className="ps-link--under discover-more-size" href="#">
                 Discover more
               </a>
             </div>
@@ -50,7 +50,7 @@ const HomeDefaultBanner = () => {
             <div className="ps-banner__content">
               {/* <p>Standout Swear</p> */}
               <h3 className="color-white">Bienvenue</h3>
-              <a className="ps-link--under" href="#">
+              <a className="ps-link--under discover-more-size" href="#">
                 Discover more
               </a>
             </div>
@@ -68,7 +68,7 @@ const HomeDefaultBanner = () => {
             <div className="ps-banner__content">
               {/* <p>T-shirt Standout </p> */}
               <h3 className="color-yellow">Karibu</h3>
-              <a className="ps-link--under" href="#">
+              <a className="ps-link--under discover-more-size" href="#">
                 Discover more
               </a>
             </div>
