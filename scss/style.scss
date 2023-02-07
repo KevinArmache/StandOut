@@ -712,8 +712,9 @@ background-image: url('/static/img/bg/home-default/3.png');
 text-align: center;
 }
 .image-item > img {
-  width: 340px;
+  width: 350px;
   height: 300px;
+  object-fit: cover;
 }
 
 .text-item > span {
