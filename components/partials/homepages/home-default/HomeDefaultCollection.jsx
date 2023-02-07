@@ -69,13 +69,14 @@ const HomeDefaultCollection = () => {
       <div className="container-item">
         <div className="image-item">
           <img
+            className="margin-right"
             src="/static/img/homepage/home-right-to-left/collection/1.jpg"
             alt=""
             srcset=""
           />
         </div>
         <div className="text-item">
-          *<span className="color-yellow-black">Top Tendencies</span>
+          <span className="color-yellow-black">Top Tendencies</span>
           <h4 className="color-white">New Arrival</h4>
           <Link href="/shop">
             <a href="#new-arrival" className="ps-link--under">
@@ -84,15 +85,16 @@ const HomeDefaultCollection = () => {
           </Link>
         </div>
       </div>
-      <div className="container-item">
+      <div className="container-item  ">
         <div className="image-item">
           <img
+            className="margin-left"
             src="/static/img/homepage/home-right-to-left/collection/2.jpg"
             alt=""
             srcset=""
           />
         </div>
-        <div className="text-item">
+        <div className="text-item text-item-right">
           <span className="color-white-black">Top Picks</span>
           <h4 className="color-yellow">Best Sellers</h4>
           <Link href="/shop">
@@ -105,6 +107,7 @@ const HomeDefaultCollection = () => {
       <div className="container-item">
         <div className="image-item">
           <img
+            className="margin-right"
             src="/static/img/homepage/home-right-to-left/collection/3.jpg"
             alt=""
             srcset=""
