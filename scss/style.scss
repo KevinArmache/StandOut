@@ -578,26 +578,11 @@ body {
   }
 
 }
-
-@media screen and (max-width: 2000px) {
-  .image-new-arrival {
-    // object-fit: cover !important; 
-    width: 250px !important;
-    height: 250px !important;
-    position: absolute;
-    top: 50% !important; 
-    right: 50% !important; 
-    transform: translate(50%, -50%) !important;
-  
-  }
-
-
-}
 .slick-slider .slick-slide {
   margin-top: 50px !important;
   }
 
-
+  
 
 // .ps-home-collection-2 .ps-block--collection-2 {
 //   height: 0px !important;
