@@ -79,7 +79,10 @@ const HomeDefaultCollection = () => {
           <span className="color-yellow-black">Top Tendencies</span>
           <h4 className="color-white">New Arrival</h4>
           <Link href="/shop">
-            <a href="#new-arrival" className="ps-link--under">
+            <a
+              href="#new-arrival"
+              className="ps-link--under discover-more-size"
+            >
               Discover more
             </a>
           </Link>
@@ -98,7 +101,7 @@ const HomeDefaultCollection = () => {
           <span className="color-white-black">Top Picks</span>
           <h4 className="color-yellow">Best Sellers</h4>
           <Link href="/shop">
-            <a href="#topsellers" className="ps-link--under">
+            <a href="#topsellers" className="ps-link--under discover-more-size">
               Discover more
             </a>
           </Link>
@@ -118,7 +121,7 @@ const HomeDefaultCollection = () => {
           <h4 className="color-white">Trendy</h4>
 
           <Link href="/shop">
-            <a className="ps-link--under">Discover more</a>
+            <a className="ps-link--under discover-more-size">Discover more</a>
           </Link>
         </div>
       </div>
